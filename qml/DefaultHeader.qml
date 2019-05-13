@@ -13,25 +13,34 @@
 // along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 import QtQuick 2.4
-import QtQuick.Layouts 1.1
 import Ubuntu.Components 1.3
 
-MainView {
-	id: root
-	objectName: 'mainView'
-	applicationName: 'amazons.arc676'
-	automaticOrientation: true
+PageHeader {
+	id: header
+	title: i18n.tr("Amazons")
 
-	width: units.gu(45)
-	height: units.gu(75)
-	property real margin: units.gu(2)
-
-	PageStack {
-		id: pageViewer
-		anchors.fill: parent
-
-		Component.onCompleted: {
-			pageViewer.clear()
-		}
+	trailingActionBar {
+		actions: [
+			Action {
+				iconName: "settings"
+				visible: pageViewer.depth === 1
+				text: i18n.tr("Game Settings")
+			},
+			Action {
+				iconName: "reset"
+				visible: pageViewer.depth === 1
+				text: i18n.tr("Restart Game")
+			},
+			Action {
+				iconName: "info"
+				visible: pageViewer.depth === 1
+				text: i18n.tr("About Amazons")
+			},
+			Action {
+				iconName: "help"
+				visible: pageViewer.depth === 1
+				text: i18n.tr("Gameplay Rules")
+			}
+		]
 	}
 }
