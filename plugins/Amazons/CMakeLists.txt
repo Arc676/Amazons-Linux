@@ -9,7 +9,11 @@ set(
 
 set(CMAKE_AUTOMOC ON)
 
+include_directories(${CMAKE_SOURCE_DIR}/plugins/Amazons/lib)
+link_directories(${CMAKE_SOURCE_DIR}/plugins/Amazons/lib)
+
 add_library(${PLUGIN} MODULE ${SRC})
+target_link_libraries(${PLUGIN} ${CMAKE_SOURCE_DIR}/plugins/Amazons/lib/libamazons.a)
 set_target_properties(${PLUGIN} PROPERTIES LIBRARY_OUTPUT_DIRECTORY ${PLUGIN})
 qt5_use_modules(${PLUGIN} Qml Quick DBus)
 

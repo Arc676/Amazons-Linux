@@ -1,4 +1,4 @@
 build
 *.ignore
-libamazons.a
+*.a
 *.click
