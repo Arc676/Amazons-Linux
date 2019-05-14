@@ -15,33 +15,39 @@
 import QtQuick 2.4
 import QtQuick.Layouts 1.1
 import Ubuntu.Components 1.3
+import Ubuntu.Components.Popups 1.3
+import QtMultimedia 5.8
 
-MainView {
-	id: root
-	objectName: 'mainView'
-	applicationName: 'amazons.arc676'
-	automaticOrientation: true
+import Amazons 1.0
 
-	width: units.gu(45)
-	height: units.gu(75)
-	property real margin: units.gu(2)
+Page {
+	id: gameViewPage
+	anchors.fill: parent
 
-	PageStack {
-		id: pageViewer
-		anchors.fill: parent
+	property SetupView setup
 
-		property SetupView setupView: SetupView {
-			visible: false
+	header: DefaultHeader {}
+
+	function playSound(sfx) {
+		if (setup.areSFXEnabled) {
+			sfx.play()
 		}
+	}
 
-		property GameView gameView: GameView {
-			setup: pageViewer.setupView
-			visible: false
-		}
+	function restartGame() {
+		PopupUtils.open(confirmRestartNotif, gameViewPage, {})
+	}
 
-		Component.onCompleted: {
-			pageViewer.clear()
-			pageViewer.push(gameView)
+	Connections {
+		target: Amazons
+	}
+
+	Component {
+		id: confirmRestartNotif
+
+		ConfirmDialog {
+			onRestart: {
+			}
 		}
 	}
 }

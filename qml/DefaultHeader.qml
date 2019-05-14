@@ -25,6 +25,7 @@ PageHeader {
 				iconName: "settings"
 				visible: pageViewer.depth === 1
 				text: i18n.tr("Game Settings")
+				onTriggered: pageViewer.push(pageViewer.setupView)
 			},
 			Action {
 				iconName: "reset"
