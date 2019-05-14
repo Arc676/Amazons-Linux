@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# This file is distributed under the same license as the amazons.arc676 package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: amazons\n"
+"Project-Id-Version: amazons.arc676\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-17 02:22+0000\n"
+"POT-Creation-Date: 2019-05-14 08:43+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,8 +17,46 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid "Hello World!"
+#: ../qml/ConfirmDialog.qml:25
+msgid "Are you sure you want to restart the game?"
 msgstr ""
 
+#: ../qml/ConfirmDialog.qml:29
+msgid "Yes, restart"
+msgstr ""
+
+#: ../qml/ConfirmDialog.qml:38
+msgid "No, keep playing"
+msgstr ""
+
+#: ../qml/DefaultHeader.qml:20
+msgid "Amazons"
+msgstr ""
+
+#: ../qml/DefaultHeader.qml:27
+msgid "Game Settings"
+msgstr ""
+
+#: ../qml/DefaultHeader.qml:33
+msgid "Restart Game"
+msgstr ""
+
+#: ../qml/DefaultHeader.qml:38
+msgid "About Amazons"
+msgstr ""
+
+#: ../qml/DefaultHeader.qml:43
+msgid "Gameplay Rules"
+msgstr ""
+
+#: ../qml/GameView.qml:88
+msgid "Bows to move"
+msgstr ""
+
+#: ../qml/SetupView.qml:100
+msgid "Enable sound effects"
+msgstr ""
+
+#: amazons.desktop.in.h:1
 msgid "Game of the Amazons"
 msgstr ""

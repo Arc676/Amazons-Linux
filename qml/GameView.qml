@@ -50,4 +50,40 @@ Page {
 			}
 		}
 	}
+
+	Flickable {
+		anchors {
+			top: header.bottom
+			topMargin: margin
+			left: parent.left
+			leftMargin: margin
+			right: parent.right
+			rightMargin: margin
+			bottom: stateLabel.top
+			bottomMargin: margin
+		}
+
+		Canvas {
+			id: gameCanvas
+			anchors.fill: parent
+
+			onPaint: {
+				var ctx = gameCanvas.getContext('2d')
+			}
+		}
+	}
+
+	Label {
+		id: stateLabel
+		anchors {
+			left: parent.left
+			leftMargin: margin
+			right: parent.right
+			rightMargin: margin
+			bottom: parent.bottom
+			bottomMargin: margin
+		}
+
+		text: i18n.tr("Bows to move")
+	}
 }
