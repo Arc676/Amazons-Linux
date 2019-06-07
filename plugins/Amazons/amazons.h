@@ -17,15 +17,25 @@
 #define AMAZONS_H
 
 #include <QObject>
+#include <QVariant>
+#include <QList>
 
 #include "libamazons.h"
 
 class Amazons: public QObject {
-    Q_OBJECT
+	Q_OBJECT
+
+	BoardState board;
+	SquareState currentPlayer = WHITE;
 
 public:
-    Amazons();
-    ~Amazons();
+	~Amazons();
+
+	Q_INVOKABLE void startGame(int wp, int bp, int bw, int bh, QVariant whitepos, QVariant blackpos);
+
+	Q_INVOKABLE bool moveAmazon(int xs, int ys, int xd, int yd, int xx, int yx, bool whitePlayer);
+
+	Q_INVOKABLE int gameIsOver();
 };
 
 #endif

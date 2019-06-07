@@ -15,8 +15,54 @@
 
 #include "amazons.h"
 
-Amazons::Amazons() {
+Amazons::~Amazons() {
+	if (board.board) {
+		boardstate_free(&board);
+	}
 }
 
-Amazons::~Amazons() {
+void Amazons::startGame(int wp, int bp, int bw, int bh, QVariant whitepos, QVariant blackpos) {
+	Square wpos[wp], bpos[bp];
+	QList<QVariant> wstart = whitepos.toList();
+	QList<QVariant> bstart = blackpos.toList();
+	int i = 0;
+	for (QList<QVariant>::iterator it = wstart.begin(); it != wstart.end(); it++) {
+		int x = (*it).toInt();
+		it++;
+		int y = (*it).toInt();
+		wpos[i] = {x, y};
+		i++;
+	}
+	i = 0;
+	for (QList<QVariant>::iterator it = bstart.begin(); it != bstart.end(); it++) {
+		int x = (*it).toInt();
+		it++;
+		int y = (*it).toInt();
+		bpos[i] = {x, y};
+		i++;
+	}
+	boardstate_init(&board, wp, bp, bw, bh, wpos, bpos);
+}
+
+bool Amazons::moveAmazon(int xs, int ys, int xd, int yd, int xx, int yx, bool whitePlayer) {
+	SquareState player = whitePlayer ? WHITE : BLACK;
+	Square src = Square { xs, ys };
+	Square dst = Square { xd, yd };
+	Square shot = Square { xx, yx };
+	if (board.board[xs * board.boardWidth + ys] == player && amazons_move(&board, &src, &dst)) {
+		if (amazons_shoot(&board, &dst, &shot)) {
+			swapPlayer(&currentPlayer);
+			return true;
+		} else {
+			amazons_move(&board, &dst, &src);
+		}
+	}
+	return false;
+}
+
+int Amazons::gameIsOver() {
+	if (playerHasValidMove(&board, currentPlayer)) {
+		return 0;
+	}
+	return currentPlayer == BLACK ? 1 : 2;
 }
