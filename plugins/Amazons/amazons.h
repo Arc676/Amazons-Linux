@@ -28,14 +28,23 @@ class Amazons: public QObject {
 	BoardState board;
 	SquareState currentPlayer = WHITE;
 
+	int wp, bp, bw, bh;
+	Square src, dst, shot;
+
 public:
 	~Amazons();
 
-	Q_INVOKABLE void startGame(int wp, int bp, int bw, int bh, QVariant whitepos, QVariant blackpos);
+	Q_INVOKABLE void startGame(QVariant whitepos, QVariant blackpos);
 
-	Q_INVOKABLE bool moveAmazon(int xs, int ys, int xd, int yd, int xx, int yx, bool whitePlayer);
+	Q_INVOKABLE bool moveAmazon(int x, int y, bool whitePlayer);
 
 	Q_INVOKABLE int gameIsOver();
+
+	Q_INVOKABLE void setGameProperties(int wp, int bp, int bw, int bh);
+
+	Q_INVOKABLE bool setSrc(int x, int y);
+
+	Q_INVOKABLE bool setDst(int x, int y);
 };
 
 #endif

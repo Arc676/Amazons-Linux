@@ -22,6 +22,12 @@ PageHeader {
 	trailingActionBar {
 		actions: [
 			Action {
+				iconName: "undo"
+				visible: pageViewer.depth === 1
+				text: "Undo Choice"
+				onTriggered: gameViewPage.undoPlacement()
+			},
+			Action {
 				iconName: "settings"
 				visible: pageViewer.depth === 1
 				text: i18n.tr("Game Settings")
@@ -31,6 +37,7 @@ PageHeader {
 				iconName: "reset"
 				visible: pageViewer.depth === 1
 				text: i18n.tr("Restart Game")
+				onTriggered: gameViewPage.restartGame()
 			},
 			Action {
 				iconName: "info"

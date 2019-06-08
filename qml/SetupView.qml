@@ -51,50 +51,72 @@ Page {
 		spacing: margin
 
 		Row {
+			spacing: margin
+
 			Label {
+				id: p1lbl
 				text: "Player 1 Amazons"
+				anchors.verticalCenter: p1amazons.verticalCenter
 			}
 
 			TextField {
 				id: p1amazons
 				placeholderText: "4"
+				width: parent.width - p1lbl.width - margin
 			}
 		}
 
 		Row {
+			spacing: margin
+
 			Label {
+				id: p2lbl
 				text: "Player 2 Amazons"
+				anchors.verticalCenter: p2amazons.verticalCenter
 			}
 
 			TextField {
 				id: p2amazons
 				placeholderText: "4"
+				width: parent.width - p2lbl.width - margin
 			}
 		}
 
 		Row {
+			spacing: margin
+
 			Label {
+				id: bwlbl
 				text: "Board width"
+				anchors.verticalCenter: boardWidth.verticalCenter
 			}
 
 			TextField {
 				id: boardWidth
 				placeholderText: "10"
+				width: parent.width - bwlbl.width - margin
 			}
 		}
 
 		Row {
+			spacing: margin
+
 			Label {
+				id: bhlbl
 				text: "Board height"
+				anchors.verticalCenter: boardHeight.verticalCenter
 			}
 
 			TextField {
 				id: boardHeight
 				placeholderText: "10"
+				width: parent.width - bhlbl.width - margin
 			}
 		}
 
 		Row {
+			spacing: margin
+
 			CheckBox {
 				id: enableSFX
 				text: i18n.tr("Enable sound effects")
