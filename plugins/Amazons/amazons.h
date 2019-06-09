@@ -34,6 +34,16 @@ class Amazons: public QObject {
 public:
 	~Amazons();
 
+	enum ClickState : int {
+		SOURCE = 0, DESTINATION, SHOT
+	};
+	Q_ENUMS(ClickState)
+
+	enum QSquareState : int {
+		QWHITE, QBLACK, QARROW, QEMPTY
+	};
+	Q_ENUMS(QSquareState)
+
 	Q_INVOKABLE void startGame(QVariant whitepos, QVariant blackpos);
 
 	Q_INVOKABLE bool moveAmazon(int x, int y);
@@ -52,7 +62,9 @@ public:
 
 	Q_INVOKABLE int getBoardWidth();
 
-	Q_INVOKABLE int getSquare(int square, int axis);
+	Q_INVOKABLE int getSquare(ClickState square, int axis);
+
+	Q_INVOKABLE QSquareState getSquareState(int x, int y);
 };
 
 #endif

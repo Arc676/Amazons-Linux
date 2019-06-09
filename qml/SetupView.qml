@@ -23,7 +23,7 @@ Page {
 	property bool areSFXEnabled: true
 
 	function parseWithDefault(text, def) {
-		parsed = parseInt(text)
+		var parsed = parseInt(text)
 		if (parsed === NaN) {
 			return def
 		}

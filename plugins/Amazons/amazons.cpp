@@ -101,9 +101,22 @@ int Amazons::getBoardWidth() {
 	return bw;
 }
 
-int Amazons::getSquare(int square, int axis) {
-	if (square == 1) {
+int Amazons::getSquare(ClickState square, int axis) {
+	if (square == SOURCE) {
 		return axis == 1 ? src.x : src.y;
 	}
 	return axis == 1 ? dst.x : dst.y;
+}
+
+Amazons::QSquareState Amazons::getSquareState(int x, int y) {
+	switch (board.board[x * board.boardWidth + y]) {
+		case BLACK:
+			return QBLACK;
+		case WHITE:
+			return QWHITE;
+		case ARROW:
+			return QARROW;
+		default:
+			return QEMPTY;
+	}
 }

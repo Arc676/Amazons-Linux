@@ -101,25 +101,35 @@ Page {
 						if ((x + y) % 2 == 0) {
 							ctx.fillRect(x * squareSize, y * squareSize, squareSize, squareSize)
 						}
+						switch (Amazons.getSquareState(x, y)) {
+							case Amazons.QWHITE:
+								ctx.drawImage("sprites/P1.png", x * squareSize, y * squareSize)
+								break
+							case Amazons.QBLACK:
+								ctx.drawImage("sprites/P2.png", x * squareSize, y * squareSize)
+								break
+							case Amazons.QARROW:
+								ctx.drawImage("sprites/Occupied.png", x * squareSize, y * squareSize)
+								break
+							default:
+								break
+						}
 					}
 				}
-				console.log(gameViewPage.clickedSquare)
 				switch (gameViewPage.clickedSquare) {
 					case 2:
 						ctx.fillStyle = "#FF0000"
-						var xd = Amazons.getSquare(2, 1)
-						var yd = Amazons.getSquare(2, 2)
+						var xd = Amazons.getSquare(Amazons.DESTINATION, 1)
+						var yd = Amazons.getSquare(Amazons.DESTINATION, 2)
 						ctx.fillRect(xd * squareSize, yd * squareSize, squareSize, squareSize)
-						console.log("filled dst with " + ctx.fillStyle)
 					case 1:
 						//ctx.fillStyle = "rgba(0, 255, 0, 0.5)"
 						ctx.fillStyle = "#00FF00"
-						var xs = Amazons.getSquare(1, 1)
-						var ys = Amazons.getSquare(1, 2)
+						var xs = Amazons.getSquare(Amazons.SOURCE, 1)
+						var ys = Amazons.getSquare(Amazons.SOURCE, 2)
 						ctx.fillRect(xs * squareSize, ys * squareSize, squareSize, squareSize)
-						console.log("filled src with " + ctx.fillStyle)
 					default:
-						break;
+						break
 				}
 			}
 
@@ -136,18 +146,18 @@ Page {
 						switch (gameViewPage.clickedSquare) {
 							case 0:
 								if (!Amazons.setSrc(x, y)) {
-									return;
+									return
 								}
-								break;
+								break
 							case 1:
 								if (!Amazons.setDst(x, y)) {
-									return;
+									return
 								}
-								break;
+								break
 							case 2:
 							default:
 								if (!Amazons.moveAmazon(x, y)) {
-									return;
+									return
 								}
 								var winner = Amazons.gameIsOver()
 								if (winner === 1) {
@@ -161,9 +171,9 @@ Page {
 										stateLabel.text = i18n.tr("Spears to move")
 									}
 								}
-								break;
+								break
 						}
-						gameViewPage.clickedSquare = (gameViewPage.clickedSquare + 1) % 3;
+						gameViewPage.clickedSquare = (gameViewPage.clickedSquare + 1) % 3
 					}
 					gameCanvas.requestPaint()
 				}
