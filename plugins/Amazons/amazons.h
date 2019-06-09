@@ -36,7 +36,7 @@ public:
 
 	Q_INVOKABLE void startGame(QVariant whitepos, QVariant blackpos);
 
-	Q_INVOKABLE bool moveAmazon(int x, int y, bool whitePlayer);
+	Q_INVOKABLE bool moveAmazon(int x, int y);
 
 	Q_INVOKABLE int gameIsOver();
 
@@ -45,6 +45,10 @@ public:
 	Q_INVOKABLE bool setSrc(int x, int y);
 
 	Q_INVOKABLE bool setDst(int x, int y);
+
+	Q_INVOKABLE int getBoardHeight();
+
+	Q_INVOKABLE int getBoardWidth();
 };
 
 #endif

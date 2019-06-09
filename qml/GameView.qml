@@ -93,8 +93,8 @@ Page {
 
 			onPaint: {
 				var ctx = gameCanvas.getContext('2d')
-				for (int x = 0; x < Amazons.getBoardWidth(); x++) {
-					for (int y = 0; y < Amazons.getBoardHeight(); y++) {
+				for (var x = 0; x < Amazons.getBoardWidth(); x++) {
+					for (var y = 0; y < Amazons.getBoardHeight(); y++) {
 						if ((x + y) % 2 == 0) {
 							ctx.fillRect(x * squareSize, y * squareSize, squareSize, squareSize)
 						}
@@ -124,7 +124,12 @@ Page {
 								break;
 							case 2:
 							default:
+								if (!Amazons.moveAmazon(x, y)) {
+									return;
+								}
+								break;
 						}
+						gameViewPage.clickedSquare = (gameViewPage.clickedSquare + 1) % 3;
 					}
 				}
 			}

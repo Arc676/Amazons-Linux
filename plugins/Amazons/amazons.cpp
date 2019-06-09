@@ -22,7 +22,8 @@ Amazons::~Amazons() {
 }
 
 void Amazons::startGame(QVariant whitepos, QVariant blackpos) {
-	Square wpos[wp], bpos[bp];
+	Square wpos[wp];
+	Square bpos[bp];
 	QList<QVariant> wstart = whitepos.toList();
 	QList<QVariant> bstart = blackpos.toList();
 	int i = 0;
@@ -30,7 +31,7 @@ void Amazons::startGame(QVariant whitepos, QVariant blackpos) {
 		int x = (*it).toInt();
 		it++;
 		int y = (*it).toInt();
-		wpos[i] = {x, y};
+		wpos[i] = Square {x, y};
 		i++;
 	}
 	i = 0;
@@ -38,16 +39,15 @@ void Amazons::startGame(QVariant whitepos, QVariant blackpos) {
 		int x = (*it).toInt();
 		it++;
 		int y = (*it).toInt();
-		bpos[i] = {x, y};
+		bpos[i] = Square {x, y};
 		i++;
 	}
 	boardstate_init(&board, wp, bp, bw, bh, wpos, bpos);
 }
 
-bool Amazons::moveAmazon(int x, int y, bool whitePlayer) {
-	SquareState player = whitePlayer ? WHITE : BLACK;
+bool Amazons::moveAmazon(int x, int y) {
 	Square shot = Square { x, y };
-	if (board.board[xs * board.boardWidth + ys] == player && amazons_move(&board, &src, &dst)) {
+	if (board.board[src.x * board.boardWidth + src.y] == currentPlayer && amazons_move(&board, &src, &dst)) {
 		if (amazons_shoot(&board, &dst, &shot)) {
 			swapPlayer(&currentPlayer);
 			return true;
@@ -87,4 +87,12 @@ bool Amazons::setDst(int x, int y) {
 		return true;
 	}
 	return false;
+}
+
+int Amazons::getBoardHeight() {
+	return bh;
+}
+
+int Amazons::getBoardWidth() {
+	return bw;
 }

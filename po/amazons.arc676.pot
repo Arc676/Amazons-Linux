@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amazons.arc676\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-07 16:46+0000\n"
+"POT-Creation-Date: 2019-06-09 09:38+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,11 +29,11 @@ msgstr ""
 msgid "No, keep playing"
 msgstr ""
 
-#: ../qml/SetupView.qml:100
+#: ../qml/SetupView.qml:122
 msgid "Enable sound effects"
 msgstr ""
 
-#: ../qml/GameView.qml:87
+#: ../qml/GameView.qml:145
 msgid "Bows to move"
 msgstr ""
 
@@ -41,19 +41,19 @@ msgstr ""
 msgid "Amazons"
 msgstr ""
 
-#: ../qml/DefaultHeader.qml:27
+#: ../qml/DefaultHeader.qml:33
 msgid "Game Settings"
 msgstr ""
 
-#: ../qml/DefaultHeader.qml:33
+#: ../qml/DefaultHeader.qml:39
 msgid "Restart Game"
 msgstr ""
 
-#: ../qml/DefaultHeader.qml:38
+#: ../qml/DefaultHeader.qml:45
 msgid "About Amazons"
 msgstr ""
 
-#: ../qml/DefaultHeader.qml:43
+#: ../qml/DefaultHeader.qml:50
 msgid "Gameplay Rules"
 msgstr ""
 
