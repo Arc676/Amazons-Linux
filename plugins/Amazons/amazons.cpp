@@ -65,6 +65,10 @@ int Amazons::gameIsOver() {
 	return currentPlayer == BLACK ? 1 : 2;
 }
 
+bool Amazons::whiteToPlay() {
+	return currentPlayer == WHITE;
+}
+
 void Amazons::setGameProperties(int wp, int bp, int bw, int bh) {
 	this->wp = wp;
 	this->bp = bp;
@@ -95,4 +99,11 @@ int Amazons::getBoardHeight() {
 
 int Amazons::getBoardWidth() {
 	return bw;
+}
+
+int Amazons::getSquare(int square, int axis) {
+	if (square == 1) {
+		return axis == 1 ? src.x : src.y;
+	}
+	return axis == 1 ? dst.x : dst.y;
 }

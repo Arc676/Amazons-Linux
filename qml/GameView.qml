@@ -93,12 +93,33 @@ Page {
 
 			onPaint: {
 				var ctx = gameCanvas.getContext('2d')
+				ctx.fillStyle = "#FFFFFF"
+				ctx.fillRect(0, 0, gameCanvas.width, gameCanvas.height)
+				ctx.fillStyle = "#7F7F7F"
 				for (var x = 0; x < Amazons.getBoardWidth(); x++) {
 					for (var y = 0; y < Amazons.getBoardHeight(); y++) {
 						if ((x + y) % 2 == 0) {
 							ctx.fillRect(x * squareSize, y * squareSize, squareSize, squareSize)
 						}
 					}
+				}
+				console.log(gameViewPage.clickedSquare)
+				switch (gameViewPage.clickedSquare) {
+					case 2:
+						ctx.fillStyle = "#FF0000"
+						var xd = Amazons.getSquare(2, 1)
+						var yd = Amazons.getSquare(2, 2)
+						ctx.fillRect(xd * squareSize, yd * squareSize, squareSize, squareSize)
+						console.log("filled dst with " + ctx.fillStyle)
+					case 1:
+						//ctx.fillStyle = "rgba(0, 255, 0, 0.5)"
+						ctx.fillStyle = "#00FF00"
+						var xs = Amazons.getSquare(1, 1)
+						var ys = Amazons.getSquare(1, 2)
+						ctx.fillRect(xs * squareSize, ys * squareSize, squareSize, squareSize)
+						console.log("filled src with " + ctx.fillStyle)
+					default:
+						break;
 				}
 			}
 
@@ -107,6 +128,7 @@ Page {
 				anchors.fill: parent
 
 				onReleased: {
+					var squareSize = gameCanvas.squareSize
 					var x = (mouse.x + flick.contentX) / squareSize
 					var y = (mouse.y + flick.contentY) / squareSize
 					if (gameViewPage.isSettingUp) {
@@ -127,10 +149,23 @@ Page {
 								if (!Amazons.moveAmazon(x, y)) {
 									return;
 								}
+								var winner = Amazons.gameIsOver()
+								if (winner === 1) {
+									stateLabel.text = i18n.tr("Bows win!")
+								} else if (winner === 2) {
+									stateLabel.text = i18n.tr("Spears win!")
+								} else {
+									if (Amazons.whiteToPlay()) {
+										stateLabel.text = i18n.tr("Bows to move")
+									} else {
+										stateLabel.text = i18n.tr("Spears to move")
+									}
+								}
 								break;
 						}
 						gameViewPage.clickedSquare = (gameViewPage.clickedSquare + 1) % 3;
 					}
+					gameCanvas.requestPaint()
 				}
 			}
 		}

@@ -40,6 +40,8 @@ public:
 
 	Q_INVOKABLE int gameIsOver();
 
+	Q_INVOKABLE bool whiteToPlay();
+
 	Q_INVOKABLE void setGameProperties(int wp, int bp, int bw, int bh);
 
 	Q_INVOKABLE bool setSrc(int x, int y);
@@ -49,6 +51,8 @@ public:
 	Q_INVOKABLE int getBoardHeight();
 
 	Q_INVOKABLE int getBoardWidth();
+
+	Q_INVOKABLE int getSquare(int square, int axis);
 };
 
 #endif
