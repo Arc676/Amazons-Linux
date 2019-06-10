@@ -36,7 +36,11 @@ Page {
 
 	function undoPlacement() {
 		if (isSettingUp) {
-			pickedPositions--
+			if (pickedPositions > 0) {
+				pickedPositions--
+				initialPositions.pop()
+				initialPositions.pop()
+			}
 		} else {
 			clickedSquare = 0
 		}
@@ -57,6 +61,8 @@ Page {
 
 	Connections {
 		target: Amazons
+
+		onRedraw: gameCanvas.requestPaint()
 	}
 
 	Component {
@@ -66,9 +72,10 @@ Page {
 			onRestart: {
 				var wp = setup.getAmazons(1)
 				var bp = setup.getAmazons(2)
-				var bw = setup.getBoardSize(1)
-				var bh = setup.getBoardSize(2)
+				var bh = setup.getBoardSize(1)
+				var bw = setup.getBoardSize(2)
 				gameViewPage.isSettingUp = true
+				gameViewPage.pickedPositions = 0
 				gameViewPage.initialPositions = []
 				gameCanvas.requestPaint()
 				Amazons.setGameProperties(wp, bp, bw, bh)
@@ -222,7 +229,6 @@ Page {
 						}
 						gameViewPage.clickedSquare = (gameViewPage.clickedSquare + 1) % 3
 					}
-					gameCanvas.requestPaint()
 				}
 			}
 		}
@@ -243,12 +249,14 @@ Page {
 	}
 
 	Component.onCompleted: {
+		gameCanvas.loadImage("sprites/P1.png")
+		gameCanvas.loadImage("sprites/P2.png")
+		gameCanvas.loadImage("sprites/Occupied.png")
 		var wstart = [3, 0, 0, 3, 0, 6, 3, 9]
 		var bstart = [6, 0, 9, 3, 9, 6, 6, 9]
 		Amazons.setGameProperties(4, 4, 10, 10)
 		gameViewPage.p1count = 4
 		gameViewPage.p2count = 4
 		Amazons.startGame(wstart, bstart)
-		gameCanvas.requestPaint()
 	}
 }

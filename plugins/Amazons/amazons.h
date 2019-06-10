@@ -31,7 +31,9 @@ class Amazons: public QObject {
 	int wp, bp, bw, bh;
 	Square src, dst, shot;
 
+	void clearBoard();
 public:
+	Amazons();
 	~Amazons();
 
 	enum ClickState : int {
@@ -65,6 +67,8 @@ public:
 	Q_INVOKABLE int getSquare(ClickState square, int axis);
 
 	Q_INVOKABLE QSquareState getSquareState(int x, int y);
+signals:
+	void redraw();
 };
 
 #endif
