@@ -24,7 +24,7 @@ Page {
 
 	function parseWithDefault(text, def) {
 		var parsed = parseInt(text)
-		if (parsed === NaN) {
+		if (isNaN(parsed) || parsed <= 0) {
 			return def
 		}
 		return parsed
@@ -47,10 +47,12 @@ Page {
 			right: parent.right
 			rightMargin: margin
 			bottom: parent.bottom
+			bottomMargin: margin
 		}
 		spacing: margin
 
 		Row {
+			width: parent.width
 			spacing: margin
 
 			Label {
@@ -67,6 +69,7 @@ Page {
 		}
 
 		Row {
+			width: parent.width
 			spacing: margin
 
 			Label {
@@ -83,6 +86,7 @@ Page {
 		}
 
 		Row {
+			width: parent.width
 			spacing: margin
 
 			Label {
@@ -99,6 +103,7 @@ Page {
 		}
 
 		Row {
+			width: parent.width
 			spacing: margin
 
 			Label {
@@ -115,6 +120,7 @@ Page {
 		}
 
 		Row {
+			width: parent.width
 			spacing: margin
 
 			CheckBox {

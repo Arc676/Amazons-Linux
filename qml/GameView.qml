@@ -29,6 +29,9 @@ Page {
 	property bool isSettingUp: false
 
 	property int pickedPositions: 0
+	property var initialPositions: []
+	property int p1count: 0
+	property int p2count: 0
 	property int clickedSquare: 0
 
 	function undoPlacement() {
@@ -63,11 +66,15 @@ Page {
 			onRestart: {
 				var wp = setup.getAmazons(1)
 				var bp = setup.getAmazons(2)
-				var bw = setup.getAmazons(1)
-				var bh = setup.getAmazons(2)
+				var bw = setup.getBoardSize(1)
+				var bh = setup.getBoardSize(2)
 				gameViewPage.isSettingUp = true
+				gameViewPage.initialPositions = []
 				gameCanvas.requestPaint()
 				Amazons.setGameProperties(wp, bp, bw, bh)
+				gameViewPage.p1count = wp
+				gameViewPage.p2count = bp
+				stateLabel.text = i18n.tr("Tap initial starting positions for first player")
 			}
 		}
 	}
@@ -101,35 +108,52 @@ Page {
 						if ((x + y) % 2 == 0) {
 							ctx.fillRect(x * squareSize, y * squareSize, squareSize, squareSize)
 						}
-						switch (Amazons.getSquareState(x, y)) {
-							case Amazons.QWHITE:
-								ctx.drawImage("sprites/P1.png", x * squareSize, y * squareSize)
-								break
-							case Amazons.QBLACK:
-								ctx.drawImage("sprites/P2.png", x * squareSize, y * squareSize)
-								break
-							case Amazons.QARROW:
-								ctx.drawImage("sprites/Occupied.png", x * squareSize, y * squareSize)
-								break
-							default:
-								break
-						}
 					}
 				}
-				switch (gameViewPage.clickedSquare) {
-					case 2:
-						ctx.fillStyle = "#FF0000"
-						var xd = Amazons.getSquare(Amazons.DESTINATION, 1)
-						var yd = Amazons.getSquare(Amazons.DESTINATION, 2)
-						ctx.fillRect(xd * squareSize, yd * squareSize, squareSize, squareSize)
-					case 1:
-						//ctx.fillStyle = "rgba(0, 255, 0, 0.5)"
-						ctx.fillStyle = "#00FF00"
-						var xs = Amazons.getSquare(Amazons.SOURCE, 1)
-						var ys = Amazons.getSquare(Amazons.SOURCE, 2)
-						ctx.fillRect(xs * squareSize, ys * squareSize, squareSize, squareSize)
-					default:
-						break
+				if (gameViewPage.isSettingUp) {
+					for (var i = 0; i < gameViewPage.pickedPositions * 2; i += 2) {
+						var x = gameViewPage.initialPositions[i]
+						var y = gameViewPage.initialPositions[i + 1]
+						if (i < gameViewPage.p1count * 2) {
+							ctx.fillStyle = "#AAAAAA"
+						} else {
+							ctx.fillStyle = "#000000"
+						}
+						ctx.fillRect(x * squareSize, y * squareSize, squareSize, squareSize)
+					}
+				} else {
+					for (var x = 0; x < Amazons.getBoardWidth(); x++) {
+						for (var y = 0; y < Amazons.getBoardHeight(); y++) {
+							switch (Amazons.getSquareState(x, y)) {
+								case Amazons.QWHITE:
+									ctx.drawImage("sprites/P1.png", x * squareSize, y * squareSize)
+									break
+								case Amazons.QBLACK:
+									ctx.drawImage("sprites/P2.png", x * squareSize, y * squareSize)
+									break
+								case Amazons.QARROW:
+									ctx.drawImage("sprites/Occupied.png", x * squareSize, y * squareSize)
+									break
+								default:
+									break
+							}
+						}
+					}
+					switch (gameViewPage.clickedSquare) {
+						case 2:
+							ctx.fillStyle = "#FF0000"
+							var xd = Amazons.getSquare(Amazons.DESTINATION, 1)
+							var yd = Amazons.getSquare(Amazons.DESTINATION, 2)
+							ctx.fillRect(xd * squareSize, yd * squareSize, squareSize, squareSize)
+						case 1:
+							//ctx.fillStyle = "rgba(0, 255, 0, 0.5)"
+							ctx.fillStyle = "#00FF00"
+							var xs = Amazons.getSquare(Amazons.SOURCE, 1)
+							var ys = Amazons.getSquare(Amazons.SOURCE, 2)
+							ctx.fillRect(xs * squareSize, ys * squareSize, squareSize, squareSize)
+						default:
+							break
+					}
 				}
 			}
 
@@ -142,6 +166,29 @@ Page {
 					var x = (mouse.x + flick.contentX) / squareSize
 					var y = (mouse.y + flick.contentY) / squareSize
 					if (gameViewPage.isSettingUp) {
+						for (var i = 0; i < gameViewPage.pickedPositions * 2; i += 2) {
+							if (gameViewPage.initialPositions[i] == x &&
+								gameViewPage.initialPositions[i + 1] == y) {
+								return;
+							}
+						}
+						gameViewPage.initialPositions.push(Math.floor(x))
+						gameViewPage.initialPositions.push(Math.floor(y))
+						gameViewPage.pickedPositions++
+						if (gameViewPage.pickedPositions >= gameViewPage.p1count + gameViewPage.p2count) {
+							var wstart = gameViewPage.initialPositions.slice(0, gameViewPage.p1count * 2)
+							var bstart = gameViewPage.initialPositions.slice(gameViewPage.p1count * 2)
+							Amazons.startGame(wstart, bstart)
+							gameViewPage.isSettingUp = false
+							stateLabel.text = i18n.tr("Bows to move")
+						} else {
+							if (gameViewPage.pickedPositions < gameViewPage.p1count) {
+								stateLabel.text = i18n.tr("Tap initial starting positions for first player")
+							} else {
+								stateLabel.text = i18n.tr("Tap initial starting positions for second player")
+							}
+							gameCanvas.requestPaint()
+						}
 					} else {
 						switch (gameViewPage.clickedSquare) {
 							case 0:
@@ -199,6 +246,8 @@ Page {
 		var wstart = [3, 0, 0, 3, 0, 6, 3, 9]
 		var bstart = [6, 0, 9, 3, 9, 6, 6, 9]
 		Amazons.setGameProperties(4, 4, 10, 10)
+		gameViewPage.p1count = 4
+		gameViewPage.p2count = 4
 		Amazons.startGame(wstart, bstart)
 		gameCanvas.requestPaint()
 	}
