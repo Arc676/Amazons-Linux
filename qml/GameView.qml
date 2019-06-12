@@ -63,6 +63,13 @@ Page {
 		target: Amazons
 
 		onRedraw: gameCanvas.requestPaint()
+		onBoardSizeChanged: {
+			gameCanvas.width = Amazons.getBoardWidth() * gameCanvas.squareSize
+			gameCanvas.height = Amazons.getBoardHeight() * gameCanvas.squareSize
+			flick.contentWidth = gameCanvas.width
+			flick.contentHeight = gameCanvas.height
+			gameCanvas.requestPaint()
+		}
 	}
 
 	Component {
@@ -77,7 +84,6 @@ Page {
 				gameViewPage.isSettingUp = true
 				gameViewPage.pickedPositions = 0
 				gameViewPage.initialPositions = []
-				gameCanvas.requestPaint()
 				Amazons.setGameProperties(wp, bp, bw, bh)
 				gameViewPage.p1count = wp
 				gameViewPage.p2count = bp
@@ -98,12 +104,16 @@ Page {
 			bottom: stateLabel.top
 			bottomMargin: margin
 		}
+		clip: true
 
 		Canvas {
 			id: gameCanvas
-			anchors.fill: parent
+			anchors {
+				top: parent.top
+				left: parent.left
+			}
 
-			property real squareSize: 40
+			property real squareSize: units.gu(5)
 
 			onPaint: {
 				var ctx = gameCanvas.getContext('2d')
@@ -133,13 +143,13 @@ Page {
 						for (var y = 0; y < Amazons.getBoardHeight(); y++) {
 							switch (Amazons.getSquareState(x, y)) {
 								case Amazons.QWHITE:
-									ctx.drawImage("sprites/P1.png", x * squareSize, y * squareSize)
+									ctx.drawImage("sprites/P1.png", x * squareSize, y * squareSize, squareSize, squareSize)
 									break
 								case Amazons.QBLACK:
-									ctx.drawImage("sprites/P2.png", x * squareSize, y * squareSize)
+									ctx.drawImage("sprites/P2.png", x * squareSize, y * squareSize, squareSize, squareSize)
 									break
 								case Amazons.QARROW:
-									ctx.drawImage("sprites/Occupied.png", x * squareSize, y * squareSize)
+									ctx.drawImage("sprites/Occupied.png", x * squareSize, y * squareSize, squareSize, squareSize)
 									break
 								default:
 									break
@@ -170,8 +180,8 @@ Page {
 
 				onReleased: {
 					var squareSize = gameCanvas.squareSize
-					var x = (mouse.x + flick.contentX) / squareSize
-					var y = (mouse.y + flick.contentY) / squareSize
+					var x = mouse.x / squareSize
+					var y = mouse.y / squareSize
 					if (gameViewPage.isSettingUp) {
 						for (var i = 0; i < gameViewPage.pickedPositions * 2; i += 2) {
 							if (gameViewPage.initialPositions[i] == x &&

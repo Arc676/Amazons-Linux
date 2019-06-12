@@ -85,6 +85,7 @@ void Amazons::setGameProperties(int wp, int bp, int bw, int bh) {
 	this->bp = bp;
 	this->bw = bw;
 	this->bh = bh;
+	emit boardSizeChanged();
 }
 
 bool Amazons::setSrc(int x, int y) {

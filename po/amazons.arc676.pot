@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amazons.arc676\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-10 10:36+0000\n"
+"POT-Creation-Date: 2019-06-12 14:37+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -33,27 +33,27 @@ msgstr ""
 msgid "Enable sound effects"
 msgstr ""
 
-#: ../qml/GameView.qml:84 ../qml/GameView.qml:193
+#: ../qml/GameView.qml:90 ../qml/GameView.qml:203
 msgid "Tap initial starting positions for first player"
 msgstr ""
 
-#: ../qml/GameView.qml:190 ../qml/GameView.qml:223 ../qml/GameView.qml:248
+#: ../qml/GameView.qml:200 ../qml/GameView.qml:233 ../qml/GameView.qml:258
 msgid "Bows to move"
 msgstr ""
 
-#: ../qml/GameView.qml:195
+#: ../qml/GameView.qml:205
 msgid "Tap initial starting positions for second player"
 msgstr ""
 
-#: ../qml/GameView.qml:218
+#: ../qml/GameView.qml:228
 msgid "Bows win!"
 msgstr ""
 
-#: ../qml/GameView.qml:220
+#: ../qml/GameView.qml:230
 msgid "Spears win!"
 msgstr ""
 
-#: ../qml/GameView.qml:225
+#: ../qml/GameView.qml:235
 msgid "Spears to move"
 msgstr ""
 

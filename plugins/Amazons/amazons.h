@@ -69,6 +69,7 @@ public:
 	Q_INVOKABLE QSquareState getSquareState(int x, int y);
 signals:
 	void redraw();
+	void boardSizeChanged();
 };
 
 #endif
