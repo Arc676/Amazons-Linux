@@ -66,6 +66,8 @@ Page {
 		gameViewPage.p1count = 4
 		gameViewPage.p2count = 4
 		Amazons.startGame(wstart, bstart)
+		gameViewPage.isSettingUp = false
+		gameViewPage.clickedSquare = 0
 	}
 
 	Connections {
@@ -93,6 +95,7 @@ Page {
 				gameViewPage.isSettingUp = true
 				gameViewPage.pickedPositions = 0
 				gameViewPage.initialPositions = []
+				gameViewPage.clickedSquare = 0
 				Amazons.setGameProperties(wp, bp, bw, bh)
 				gameViewPage.p1count = wp
 				gameViewPage.p2count = bp

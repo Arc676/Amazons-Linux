@@ -39,6 +39,10 @@ MainView {
 			visible: false
 		}
 
+		property AboutView aboutView: AboutView {
+			visible: false
+		}
+
 		Component.onCompleted: {
 			pageViewer.clear()
 			pageViewer.push(gameView)

@@ -49,6 +49,7 @@ PageHeader {
 				iconName: "info"
 				visible: pageViewer.depth === 1
 				text: i18n.tr("About Amazons")
+				onTriggered: pageViewer.push(pageViewer.aboutView)
 			},
 			Action {
 				iconName: "help"

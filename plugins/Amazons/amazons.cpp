@@ -52,6 +52,7 @@ void Amazons::startGame(QVariant whitepos, QVariant blackpos) {
 		i++;
 	}
 	boardstate_init(&board, wp, bp, bw, bh, wpos, bpos);
+	currentPlayer = WHITE;
 	emit redraw();
 }
 
