@@ -59,6 +59,15 @@ Page {
 		PopupUtils.open(confirmRestartNotif, gameViewPage, {})
 	}
 
+	function newStandardGame() {
+		var wstart = [3, 0, 0, 3, 0, 6, 3, 9]
+		var bstart = [6, 0, 9, 3, 9, 6, 6, 9]
+		Amazons.setGameProperties(4, 4, 10, 10)
+		gameViewPage.p1count = 4
+		gameViewPage.p2count = 4
+		Amazons.startGame(wstart, bstart)
+	}
+
 	Connections {
 		target: Amazons
 
@@ -262,11 +271,6 @@ Page {
 		gameCanvas.loadImage("sprites/P1.png")
 		gameCanvas.loadImage("sprites/P2.png")
 		gameCanvas.loadImage("sprites/Occupied.png")
-		var wstart = [3, 0, 0, 3, 0, 6, 3, 9]
-		var bstart = [6, 0, 9, 3, 9, 6, 6, 9]
-		Amazons.setGameProperties(4, 4, 10, 10)
-		gameViewPage.p1count = 4
-		gameViewPage.p2count = 4
-		Amazons.startGame(wstart, bstart)
+		newStandardGame()
 	}
 }

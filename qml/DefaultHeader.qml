@@ -24,8 +24,14 @@ PageHeader {
 			Action {
 				iconName: "undo"
 				visible: pageViewer.depth === 1
-				text: "Undo Choice"
+				text: i18n.tr("Undo Choice")
 				onTriggered: gameViewPage.undoPlacement()
+			},
+			Action {
+				iconName: "reload"
+				visible: pageViewer.depth === 1
+				text: i18n.tr("New Standard Game")
+				onTriggered: gameViewPage.newStandardGame()
 			},
 			Action {
 				iconName: "settings"
@@ -36,7 +42,7 @@ PageHeader {
 			Action {
 				iconName: "reset"
 				visible: pageViewer.depth === 1
-				text: i18n.tr("Restart Game")
+				text: i18n.tr("New Custom Game")
 				onTriggered: gameViewPage.restartGame()
 			},
 			Action {
