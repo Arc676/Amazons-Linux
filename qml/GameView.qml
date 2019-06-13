@@ -40,6 +40,9 @@ Page {
 				pickedPositions--
 				initialPositions.pop()
 				initialPositions.pop()
+				if (pickedPositions < p1count) {
+					stateLabel.text = i18n.tr("Tap initial starting positions for first player")
+				}
 			}
 		} else {
 			clickedSquare = 0
@@ -55,8 +58,8 @@ Page {
 		}
 	}
 
-	function restartGame() {
-		PopupUtils.open(confirmRestartNotif, gameViewPage, {})
+	function restartGame(custom) {
+		PopupUtils.open(confirmRestartNotif, gameViewPage, { "custom" : custom })
 	}
 
 	function newStandardGame() {
@@ -88,18 +91,22 @@ Page {
 
 		ConfirmDialog {
 			onRestart: {
-				var wp = setup.getAmazons(1)
-				var bp = setup.getAmazons(2)
-				var bh = setup.getBoardSize(1)
-				var bw = setup.getBoardSize(2)
-				gameViewPage.isSettingUp = true
-				gameViewPage.pickedPositions = 0
-				gameViewPage.initialPositions = []
-				gameViewPage.clickedSquare = 0
-				Amazons.setGameProperties(wp, bp, bw, bh)
-				gameViewPage.p1count = wp
-				gameViewPage.p2count = bp
-				stateLabel.text = i18n.tr("Tap initial starting positions for first player")
+				if (custom) {
+					var wp = setup.getAmazons(1)
+					var bp = setup.getAmazons(2)
+					var bh = setup.getBoardSize(1)
+					var bw = setup.getBoardSize(2)
+					gameViewPage.isSettingUp = true
+					gameViewPage.pickedPositions = 0
+					gameViewPage.initialPositions = []
+					gameViewPage.clickedSquare = 0
+					Amazons.setGameProperties(wp, bp, bw, bh)
+					gameViewPage.p1count = wp
+					gameViewPage.p2count = bp
+					stateLabel.text = i18n.tr("Tap initial starting positions for first player")
+				} else {
+					newStandardGame()
+				}
 			}
 		}
 	}
@@ -175,8 +182,7 @@ Page {
 							var yd = Amazons.getSquare(Amazons.DESTINATION, 2)
 							ctx.fillRect(xd * squareSize, yd * squareSize, squareSize, squareSize)
 						case 1:
-							//ctx.fillStyle = "rgba(0, 255, 0, 0.5)"
-							ctx.fillStyle = "#00FF00"
+							ctx.fillStyle = Qt.rgba(0, 255, 0, 0.5)
 							var xs = Amazons.getSquare(Amazons.SOURCE, 1)
 							var ys = Amazons.getSquare(Amazons.SOURCE, 2)
 							ctx.fillRect(xs * squareSize, ys * squareSize, squareSize, squareSize)
@@ -192,8 +198,8 @@ Page {
 
 				onReleased: {
 					var squareSize = gameCanvas.squareSize
-					var x = mouse.x / squareSize
-					var y = mouse.y / squareSize
+					var x = Math.floor(mouse.x / squareSize)
+					var y = Math.floor(mouse.y / squareSize)
 					if (gameViewPage.isSettingUp) {
 						for (var i = 0; i < gameViewPage.pickedPositions * 2; i += 2) {
 							if (gameViewPage.initialPositions[i] == x &&
@@ -201,8 +207,8 @@ Page {
 								return;
 							}
 						}
-						gameViewPage.initialPositions.push(Math.floor(x))
-						gameViewPage.initialPositions.push(Math.floor(y))
+						gameViewPage.initialPositions.push(x)
+						gameViewPage.initialPositions.push(y)
 						gameViewPage.pickedPositions++
 						if (gameViewPage.pickedPositions >= gameViewPage.p1count + gameViewPage.p2count) {
 							var wstart = gameViewPage.initialPositions.slice(0, gameViewPage.p1count * 2)

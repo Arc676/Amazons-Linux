@@ -31,7 +31,7 @@ PageHeader {
 				iconName: "reload"
 				visible: pageViewer.depth === 1
 				text: i18n.tr("New Standard Game")
-				onTriggered: gameViewPage.newStandardGame()
+				onTriggered: gameViewPage.restartGame(false)
 			},
 			Action {
 				iconName: "settings"
@@ -43,7 +43,7 @@ PageHeader {
 				iconName: "reset"
 				visible: pageViewer.depth === 1
 				text: i18n.tr("New Custom Game")
-				onTriggered: gameViewPage.restartGame()
+				onTriggered: gameViewPage.restartGame(true)
 			},
 			Action {
 				iconName: "info"

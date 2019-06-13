@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amazons.arc676\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-13 17:07+0000\n"
+"POT-Creation-Date: 2019-06-13 19:49+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -39,32 +39,41 @@ msgid ""
 "The Game of the Amazons can be played with any number of Amazons and on any "
 "board size or shape. You can configure the game parameters in the game "
 "settings. The standard configuration involves 4 Amazons for each player on a "
-"10x10 grid. This configuration is also available for gameplay. If the "
-"entirety of the board does not fit on screen, you can drag to view different "
-"areas of the board. The player represented by the bows always plays first. "
-"At the bottom of the screen, the current player is indicated. To make a "
-"move, tap an Amazon you control, a valid destination square, and a square to "
-"which to shoot. Tap the undo button to clear your square selections and "
-"start over. Tapping an invalid square at any point will not affect the app "
-"state. It is not currently possible to undo a completed move."
+"10x10 grid. If the entirety of the board does not fit on screen, you can "
+"drag to view different areas of the board. The player represented by the "
+"bows always plays first. At the bottom of the screen, the current player is "
+"indicated. To make a move, tap an Amazon you control, a valid destination "
+"square, and a square to which to shoot. Tapping an invalid square at any "
+"point will not affect the app state."
 msgstr ""
 
 #: ../qml/RulesView.qml:52
+msgid ""
+"Tap the clockwise-facing reset button to start a new game using the standard "
+"configuration. This is also the configuration used when the app is launched. "
+"Tap the counterclockwise-facing reset button to start a new game with a "
+"custom starting configuration. The parameters are set in the game settings. "
+"During a game, tap the undo button to clear your square selections and start "
+"over. It is not currently possible to undo a completed move. While setting "
+"up a custom game, tap the undo button to undo the last selection."
+msgstr ""
+
+#: ../qml/RulesView.qml:56
 msgid ""
 "For more details, please refer to the <a href='https://en.wikipedia.org/wiki/"
 "Game_of_the_Amazons'>Wikipedia page</a> or <a href='https://www.youtube.com/"
 "watch?v=kjSOSeRZVNg'>the Numberphile YouTube video</a>."
 msgstr ""
 
-#: ../qml/ConfirmDialog.qml:25
+#: ../qml/ConfirmDialog.qml:26
 msgid "Are you sure you want to restart the game?"
 msgstr ""
 
-#: ../qml/ConfirmDialog.qml:29
+#: ../qml/ConfirmDialog.qml:30
 msgid "Yes, restart"
 msgstr ""
 
-#: ../qml/ConfirmDialog.qml:38
+#: ../qml/ConfirmDialog.qml:39
 msgid "No, keep playing"
 msgstr ""
 
@@ -103,27 +112,27 @@ msgid ""
 "All assets by Arc676/Alessandro Vinciguerra adapted from CC0 assets by %1"
 msgstr ""
 
-#: ../qml/GameView.qml:102 ../qml/GameView.qml:215
+#: ../qml/GameView.qml:44 ../qml/GameView.qml:106 ../qml/GameView.qml:222
 msgid "Tap initial starting positions for first player"
 msgstr ""
 
-#: ../qml/GameView.qml:212 ../qml/GameView.qml:245 ../qml/GameView.qml:270
+#: ../qml/GameView.qml:219 ../qml/GameView.qml:252 ../qml/GameView.qml:277
 msgid "Bows to move"
 msgstr ""
 
-#: ../qml/GameView.qml:217
+#: ../qml/GameView.qml:224
 msgid "Tap initial starting positions for second player"
 msgstr ""
 
-#: ../qml/GameView.qml:240
+#: ../qml/GameView.qml:247
 msgid "Bows win!"
 msgstr ""
 
-#: ../qml/GameView.qml:242
+#: ../qml/GameView.qml:249
 msgid "Spears win!"
 msgstr ""
 
-#: ../qml/GameView.qml:247
+#: ../qml/GameView.qml:254
 msgid "Spears to move"
 msgstr ""
 

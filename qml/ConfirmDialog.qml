@@ -22,6 +22,7 @@ Dialog {
 
 	signal restart()
 
+	property var custom
 	text: i18n.tr("Are you sure you want to restart the game?")
 
 	Button {
