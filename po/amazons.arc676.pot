@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amazons.arc676\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-12 14:37+0000\n"
+"POT-Creation-Date: 2019-06-13 17:07+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,45 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+#: ../qml/RulesView.qml:40
+msgid "Gameplay rules"
+msgstr ""
+
+#: ../qml/RulesView.qml:44
+msgid ""
+"Amazons is a game invented in 1988 by Walter Zamkauskas of Argentina. It's "
+"similar to go and chess. Two players each control a number of Amazons. These "
+"can move any number of squares in any direction like chess queens. After "
+"moving, they shoot an arrow which permanently occupies the tile on which it "
+"lands. The arrow can land on any square accessible by a chess-queen-like "
+"move from the Amazon's new location. Amazons and arrows cannot move across a "
+"square if it is occupied by an arrow or another Amazon. The first player "
+"unable to make a legal move loses. Equivalently, the last player able to "
+"make a legal move wins the game."
+msgstr ""
+
+#: ../qml/RulesView.qml:48
+msgid ""
+"The Game of the Amazons can be played with any number of Amazons and on any "
+"board size or shape. You can configure the game parameters in the game "
+"settings. The standard configuration involves 4 Amazons for each player on a "
+"10x10 grid. This configuration is also available for gameplay. If the "
+"entirety of the board does not fit on screen, you can drag to view different "
+"areas of the board. The player represented by the bows always plays first. "
+"At the bottom of the screen, the current player is indicated. To make a "
+"move, tap an Amazon you control, a valid destination square, and a square to "
+"which to shoot. Tap the undo button to clear your square selections and "
+"start over. Tapping an invalid square at any point will not affect the app "
+"state. It is not currently possible to undo a completed move."
+msgstr ""
+
+#: ../qml/RulesView.qml:52
+msgid ""
+"For more details, please refer to the <a href='https://en.wikipedia.org/wiki/"
+"Game_of_the_Amazons'>Wikipedia page</a> or <a href='https://www.youtube.com/"
+"watch?v=kjSOSeRZVNg'>the Numberphile YouTube video</a>."
+msgstr ""
 
 #: ../qml/ConfirmDialog.qml:25
 msgid "Are you sure you want to restart the game?"
@@ -29,31 +68,62 @@ msgstr ""
 msgid "No, keep playing"
 msgstr ""
 
-#: ../qml/SetupView.qml:128
-msgid "Enable sound effects"
+#: ../qml/AboutView.qml:40
+msgid "written by Arc676/Alessandro Vinciguerra. Project available under"
 msgstr ""
 
-#: ../qml/GameView.qml:90 ../qml/GameView.qml:203
+#: ../qml/AboutView.qml:44
+msgid ""
+"This program is free software: you can redistribute it and/or modify it "
+"under the terms of the GNU General Public License as published by the Free "
+"Software Foundation (version 3)."
+msgstr ""
+
+#: ../qml/AboutView.qml:48
+msgid ""
+"This program is distributed in the hope that it will be useful, but WITHOUT "
+"ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
+"FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for "
+"more details."
+msgstr ""
+
+#: ../qml/AboutView.qml:52
+msgid ""
+"For the full license text, visit the <a href='https://github.com/Arc676/"
+"Amazons-Linux'>repository</a> or the <a href='http://www.gnu.org/"
+"licenses/'>GNU licenses page</a>"
+msgstr ""
+
+#: ../qml/AboutView.qml:56
+msgid "%1 assets"
+msgstr ""
+
+#: ../qml/AboutView.qml:61
+msgid ""
+"All assets by Arc676/Alessandro Vinciguerra adapted from CC0 assets by %1"
+msgstr ""
+
+#: ../qml/GameView.qml:102 ../qml/GameView.qml:215
 msgid "Tap initial starting positions for first player"
 msgstr ""
 
-#: ../qml/GameView.qml:200 ../qml/GameView.qml:233 ../qml/GameView.qml:258
+#: ../qml/GameView.qml:212 ../qml/GameView.qml:245 ../qml/GameView.qml:270
 msgid "Bows to move"
 msgstr ""
 
-#: ../qml/GameView.qml:205
+#: ../qml/GameView.qml:217
 msgid "Tap initial starting positions for second player"
 msgstr ""
 
-#: ../qml/GameView.qml:228
+#: ../qml/GameView.qml:240
 msgid "Bows win!"
 msgstr ""
 
-#: ../qml/GameView.qml:230
+#: ../qml/GameView.qml:242
 msgid "Spears win!"
 msgstr ""
 
-#: ../qml/GameView.qml:235
+#: ../qml/GameView.qml:247
 msgid "Spears to move"
 msgstr ""
 
@@ -61,19 +131,27 @@ msgstr ""
 msgid "Amazons"
 msgstr ""
 
+#: ../qml/DefaultHeader.qml:27
+msgid "Undo Choice"
+msgstr ""
+
 #: ../qml/DefaultHeader.qml:33
-msgid "Game Settings"
+msgid "New Standard Game"
 msgstr ""
 
 #: ../qml/DefaultHeader.qml:39
-msgid "Restart Game"
+msgid "Game Settings"
 msgstr ""
 
 #: ../qml/DefaultHeader.qml:45
+msgid "New Custom Game"
+msgstr ""
+
+#: ../qml/DefaultHeader.qml:51
 msgid "About Amazons"
 msgstr ""
 
-#: ../qml/DefaultHeader.qml:50
+#: ../qml/DefaultHeader.qml:57
 msgid "Gameplay Rules"
 msgstr ""
 

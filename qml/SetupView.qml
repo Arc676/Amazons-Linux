@@ -119,7 +119,7 @@ Page {
 			}
 		}
 
-		Row {
+		/*Row {
 			width: parent.width
 			spacing: margin
 
@@ -130,6 +130,6 @@ Page {
 
 				onClicked: areSFXEnabled = checked
 			}
-		}
+		}*/
 	}
 }

@@ -37,7 +37,7 @@ Page {
 			spacing: margin
 
 			WrappingLabel {
-				text: "Game of the Amazons - " + i18n.tr("written by Arc676/Alessandro Vinciguerra. Project available under") + " GPLv3. Copyright 2018-9 Arc676/Alessandro Vinciguerra <alesvinciguerra@gmail.com>"
+				text: "Game of the Amazons - " + i18n.tr("written by Arc676/Alessandro Vinciguerra. Project available under") + " GPLv3. Copyright 2019 Arc676/Alessandro Vinciguerra <alesvinciguerra@gmail.com>"
 			}
 
 			WrappingLabel {

@@ -43,6 +43,10 @@ MainView {
 			visible: false
 		}
 
+		property RulesView rulesView: RulesView {
+			visible: false
+		}
+
 		Component.onCompleted: {
 			pageViewer.clear()
 			pageViewer.push(gameView)

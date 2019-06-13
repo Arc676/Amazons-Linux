@@ -55,6 +55,7 @@ PageHeader {
 				iconName: "help"
 				visible: pageViewer.depth === 1
 				text: i18n.tr("Gameplay Rules")
+				onTriggered: pageViewer.push(pageViewer.rulesView)
 			}
 		]
 	}
