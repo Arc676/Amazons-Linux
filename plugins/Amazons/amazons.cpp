@@ -58,7 +58,7 @@ void Amazons::startGame(QVariant whitepos, QVariant blackpos) {
 
 bool Amazons::moveAmazon(int x, int y) {
 	Square shot = Square { x, y };
-	if (board.board[src.x * board.boardWidth + src.y] == currentPlayer && amazons_move(&board, &src, &dst)) {
+	if (board.board[src.y * board.boardWidth + src.x] == currentPlayer && amazons_move(&board, &src, &dst)) {
 		if (amazons_shoot(&board, &dst, &shot)) {
 			swapPlayer(&currentPlayer);
 			emit redraw();
@@ -90,7 +90,7 @@ void Amazons::setGameProperties(int wp, int bp, int bw, int bh) {
 }
 
 bool Amazons::setSrc(int x, int y) {
-	if (board.board[x * board.boardWidth + y] == currentPlayer) {
+	if (board.board[y * board.boardWidth + x] == currentPlayer) {
 		src = Square { x, y };
 		emit redraw();
 		return true;
@@ -127,7 +127,7 @@ Amazons::QSquareState Amazons::getSquareState(int x, int y) {
 	if (!board.board) {
 		return QEMPTY;
 	}
-	switch (board.board[x * board.boardWidth + y]) {
+	switch (board.board[y * board.boardWidth + x]) {
 		case BLACK:
 			return QBLACK;
 		case WHITE:

@@ -71,6 +71,7 @@ Page {
 		Amazons.startGame(wstart, bstart)
 		gameViewPage.isSettingUp = false
 		gameViewPage.clickedSquare = 0
+		stateLabel.text = i18n.tr("Bows to move")
 	}
 
 	Connections {

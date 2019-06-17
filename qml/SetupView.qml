@@ -35,7 +35,7 @@ Page {
 	}
 
 	function getBoardSize(axis) {
-		return parseWithDefault(axis === 1 ? boardWidth.text : boardHeight.text, 10)
+		return parseWithDefault(axis === 1 ? boardHeight.text : boardWidth.text, 10)
 	}
 
 	Column {
