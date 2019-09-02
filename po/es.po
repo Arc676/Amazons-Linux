@@ -1,0 +1,214 @@
+# Spanish translation for amazons.arc676.
+# Copyright (C) 2019
+# This file is distributed under the same license as the amazons.arc676 package.
+# advocatux <advocatux@airpost.net>.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: amazons.arc676\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-06-17 08:00+0000\n"
+"PO-Revision-Date: 2019-09-02 11:15+0200\n"
+"Last-Translator: advocatux <advocatux@airpost.net>\n"
+"Language-Team: UBports Spanish Team\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../qml/RulesView.qml:40
+msgid "Gameplay rules"
+msgstr "Reglas del juego"
+
+#: ../qml/RulesView.qml:44
+msgid ""
+"Amazons is a game invented in 1988 by Walter Zamkauskas of Argentina. It's "
+"similar to go and chess. Two players each control a number of Amazons. These "
+"can move any number of squares in any direction like chess queens. After "
+"moving, they shoot an arrow which permanently occupies the tile on which it "
+"lands. The arrow can land on any square accessible by a chess-queen-like "
+"move from the Amazon's new location. Amazons and arrows cannot move across a "
+"square if it is occupied by an arrow or another Amazon. The first player "
+"unable to make a legal move loses. Equivalently, the last player able to "
+"make a legal move wins the game."
+msgstr ""
+"Amazonas es un juego inventado en 1988 por el argentino Walter Zamkauskas. "
+"Es similar al go y al ajedrez. Dos jugadores controlan cada uno cierto número "
+"de amazonas. Éstas se pueden mover en cualquier dirección como las reinas en el "
+"ajedrez. Después de desplazarse, disparan una flecha que ocupa "
+"permanentemente la casilla en la que aterriza. La flecha puede aterrizar en "
+"cualquier casilla accesible según los movimientos permitidos a las reinas en "
+"el ajedrez desde la nueva ubicación de la amazona. Tanto las amazonas como "
+"las flechas no se pueden mover a una casilla que esté ocupada por una flecha "
+"u otra amazona. Pierde el primer jugador que no pueda hacer un movimiento "
+"permitido. Igualmente, gana el juego el último jugador que pueda hacer un "
+"movimiento permitido."
+
+#: ../qml/RulesView.qml:48
+msgid ""
+"The Game of the Amazons can be played with any number of Amazons and on any "
+"board size or shape. You can configure the game parameters in the game "
+"settings. The standard configuration involves 4 Amazons for each player on a "
+"10x10 grid. If the entirety of the board does not fit on screen, you can "
+"drag to view different areas of the board. The player represented by the "
+"bows always plays first. At the bottom of the screen, the current player is "
+"indicated. To make a move, tap an Amazon you control, a valid destination "
+"square, and a square to which to shoot. Tapping an invalid square at any "
+"point will not affect the app state."
+msgstr ""
+"El juego de las amazonas se puede jugar con cualquier número de amazonas y "
+"en un tablero de cualquier forma o tamaño. Puede configurar los parámetros "
+"del juego en la configuración del juego. La configuración estándar implica 4 "
+"amazonas para cada jugador en una rejilla de 10x10. Si el tablero en su "
+"totalidad no cabe en la pantalla, puede arrastrarlo para ver las diferentes "
+"áreas. El jugador representado por los arcos siempre juega el primero. En la "
+"zona inferior de la pantalla se indica el jugador actual. Para realizar un "
+"movimiento, pulse en una amazona que controle, una casilla de destino válida "
+"y una casilla a la que disparar. Pulsar una casilla no válida en cualquier "
+"momento no afectará el estado de la aplicación."
+
+#: ../qml/RulesView.qml:52
+msgid ""
+"Tap the clockwise-facing reset button to start a new game using the standard "
+"configuration. This is also the configuration used when the app is launched. "
+"Tap the counterclockwise-facing reset button to start a new game with a "
+"custom starting configuration. The parameters are set in the game settings. "
+"During a game, tap the undo button to clear your square selections and start "
+"over. It is not currently possible to undo a completed move. While setting "
+"up a custom game, tap the undo button to undo the last selection."
+msgstr ""
+"Pulse el botón de reinicio orientado en el sentido de las agujas del reloj "
+"para comenzar un nuevo juego usando la configuración estándar. Esta también "
+"es la configuración usada al iniciar la aplicación. Pulse el botón de "
+"reinicio orientado en el sentido contrario a las agujas del reloj para "
+"comenzar un nuevo juego usando la configuración personalizada. Los "
+"parámetros se establecen en la configuración del juego. Durante un juego, "
+"pulse el botón de deshacer para limpiar sus selecciones y empezar de nuevo. "
+"No es posible actualmente deshacer un movimiento completado. Mientras "
+"configura un juego personalizado, pulse el botón deshacer para deshacer la "
+"última selección."
+
+#: ../qml/RulesView.qml:56
+msgid ""
+"For more details, please refer to the <a href='https://en.wikipedia.org/wiki/"
+"Game_of_the_Amazons'>Wikipedia page</a> or <a href='https://www.youtube.com/"
+"watch?v=kjSOSeRZVNg'>the Numberphile YouTube video</a>."
+msgstr ""
+"Para más detalles, vea la <a href='https://es.wikipedia.org/wiki/"
+"Amazonas_(juego)'>página de Wikipedia</a> o <a href='https://www.youtube.com/"
+"watch?v=kjSOSeRZVNg'>el vídeo en YouTube de Numberphile</a>."
+
+#: ../qml/ConfirmDialog.qml:26
+msgid "Are you sure you want to restart the game?"
+msgstr "¿Seguro que quiere reiniciar el juego?"
+
+#: ../qml/ConfirmDialog.qml:30
+msgid "Yes, restart"
+msgstr "Sí, reiniciar"
+
+#: ../qml/ConfirmDialog.qml:39
+msgid "No, keep playing"
+msgstr "No, seguir jugando"
+
+#: ../qml/AboutView.qml:40
+msgid "written by Arc676/Alessandro Vinciguerra. Project available under"
+msgstr "escrito por Arc676/Alessandro Vinciguerra. Proyecto disponible bajo"
+
+#: ../qml/AboutView.qml:44
+msgid ""
+"This program is free software: you can redistribute it and/or modify it "
+"under the terms of the GNU General Public License as published by the Free "
+"Software Foundation (version 3)."
+msgstr ""
+"Este programa es software libre: puede redistribuirlo y/o modificarlo según "
+"los términos de la licencia pública general de GNU publicada por la "
+"fundación de software libre («Free Software Foundation (version 3)»)."
+
+#: ../qml/AboutView.qml:48
+msgid ""
+"This program is distributed in the hope that it will be useful, but WITHOUT "
+"ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
+"FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for "
+"more details."
+msgstr ""
+"Este programa se distribuye con la esperanza de que sea útil pero SIN "
+"NINGUNA GARANTÍA; ni siquiera la garantía implícita de COMERCIALIZACIÓN o "
+"IDONEIDAD PARA UN FIN ESPECÍFICO. Vea la licencia pública general de GNU "
+"para más detalles."
+
+#: ../qml/AboutView.qml:52
+msgid ""
+"For the full license text, visit the <a href='https://github.com/Arc676/"
+"Amazons-Linux'>repository</a> or the <a href='http://www.gnu.org/"
+"licenses/'>GNU licenses page</a>"
+msgstr ""
+"Para el texto de la licencia completa, visite el <a href='https://github.com/"
+"Arc676/Amazons-Linux'>repositorio</a> o la <a href='http://www.gnu.org/"
+"licenses/'>página de licencias de GNU</a>"
+
+#: ../qml/AboutView.qml:56
+msgid "%1 assets"
+msgstr "%1 recursos"
+
+#: ../qml/AboutView.qml:61
+msgid ""
+"All assets by Arc676/Alessandro Vinciguerra adapted from CC0 assets by %1"
+msgstr ""
+"Todos los recursos de Arc676/Alessandro Vinciguerra, adaptados desde "
+"los recursos de CC0 por %1"
+
+#: ../qml/GameView.qml:44 ../qml/GameView.qml:106 ../qml/GameView.qml:221
+msgid "Tap initial starting positions for first player"
+msgstr "Pulsar las posiciones iniciales de partida para el primer jugador"
+
+#: ../qml/GameView.qml:218 ../qml/GameView.qml:251 ../qml/GameView.qml:276
+msgid "Bows to move"
+msgstr "Turno de los arcos para mover"
+
+#: ../qml/GameView.qml:223
+msgid "Tap initial starting positions for second player"
+msgstr "Pulsar las posiciones iniciales de partida para el segundo jugador"
+
+#: ../qml/GameView.qml:246
+msgid "Bows win!"
+msgstr "¡Ganan los arcos!"
+
+#: ../qml/GameView.qml:248
+msgid "Spears win!"
+msgstr "¡Ganan las lanzas!"
+
+#: ../qml/GameView.qml:253
+msgid "Spears to move"
+msgstr "Turno de las lanzas para mover"
+
+#: ../qml/DefaultHeader.qml:20
+msgid "Amazons"
+msgstr "Amazonas"
+
+#: ../qml/DefaultHeader.qml:27
+msgid "Undo Choice"
+msgstr "Deshacer elección"
+
+#: ../qml/DefaultHeader.qml:33
+msgid "New Standard Game"
+msgstr "Nuevo juego estándar"
+
+#: ../qml/DefaultHeader.qml:39
+msgid "Game Settings"
+msgstr "Configuración del juego"
+
+#: ../qml/DefaultHeader.qml:45
+msgid "New Custom Game"
+msgstr "Nuevo juego personalizado"
+
+#: ../qml/DefaultHeader.qml:51
+msgid "About Amazons"
+msgstr "Acerca de amazonas"
+
+#: ../qml/DefaultHeader.qml:57
+msgid "Gameplay Rules"
+msgstr "Reglas del juego"
+
+#: amazons.desktop.in.h:1
+msgid "Game of the Amazons"
+msgstr "Juego de las amazonas"
