@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amazons.arc676\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-17 08:00+0000\n"
+"POT-Creation-Date: 2020-08-17 12:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -65,16 +65,29 @@ msgid ""
 "watch?v=kjSOSeRZVNg'>the Numberphile YouTube video</a>."
 msgstr ""
 
-#: ../qml/ConfirmDialog.qml:26
-msgid "Are you sure you want to restart the game?"
+#: ../qml/GameView.qml:44 ../qml/GameView.qml:107 ../qml/GameView.qml:222
+msgid "Tap initial starting positions for first player"
 msgstr ""
 
-#: ../qml/ConfirmDialog.qml:30
-msgid "Yes, restart"
+#: ../qml/GameView.qml:74 ../qml/GameView.qml:219 ../qml/GameView.qml:252
+#: ../qml/GameView.qml:277
+msgid "Bows to move"
 msgstr ""
 
-#: ../qml/ConfirmDialog.qml:39
-msgid "No, keep playing"
+#: ../qml/GameView.qml:224
+msgid "Tap initial starting positions for second player"
+msgstr ""
+
+#: ../qml/GameView.qml:247
+msgid "Bows win!"
+msgstr ""
+
+#: ../qml/GameView.qml:249
+msgid "Spears win!"
+msgstr ""
+
+#: ../qml/GameView.qml:254
+msgid "Spears to move"
 msgstr ""
 
 #: ../qml/AboutView.qml:40
@@ -112,30 +125,6 @@ msgid ""
 "All assets by Arc676/Alessandro Vinciguerra adapted from CC0 assets by %1"
 msgstr ""
 
-#: ../qml/GameView.qml:44 ../qml/GameView.qml:106 ../qml/GameView.qml:221
-msgid "Tap initial starting positions for first player"
-msgstr ""
-
-#: ../qml/GameView.qml:218 ../qml/GameView.qml:251 ../qml/GameView.qml:276
-msgid "Bows to move"
-msgstr ""
-
-#: ../qml/GameView.qml:223
-msgid "Tap initial starting positions for second player"
-msgstr ""
-
-#: ../qml/GameView.qml:246
-msgid "Bows win!"
-msgstr ""
-
-#: ../qml/GameView.qml:248
-msgid "Spears win!"
-msgstr ""
-
-#: ../qml/GameView.qml:253
-msgid "Spears to move"
-msgstr ""
-
 #: ../qml/DefaultHeader.qml:20
 msgid "Amazons"
 msgstr ""
@@ -162,6 +151,18 @@ msgstr ""
 
 #: ../qml/DefaultHeader.qml:57
 msgid "Gameplay Rules"
+msgstr ""
+
+#: ../qml/ConfirmDialog.qml:26
+msgid "Are you sure you want to restart the game?"
+msgstr ""
+
+#: ../qml/ConfirmDialog.qml:30
+msgid "Yes, restart"
+msgstr ""
+
+#: ../qml/ConfirmDialog.qml:39
+msgid "No, keep playing"
 msgstr ""
 
 #: amazons.desktop.in.h:1
