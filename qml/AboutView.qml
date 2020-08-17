@@ -1,4 +1,4 @@
-// Copyright (C) 2019 Arc676/Alessandro Vinciguerra <alesvinciguerra@gmail.com>
+// Copyright (C) 2019-20 Arc676/Alessandro Vinciguerra <alesvinciguerra@gmail.com>
 
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -6,7 +6,7 @@
 
 // This program is distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 // GNU General Public License for more details.
 
 // You should have received a copy of the GNU General Public License
@@ -37,7 +37,7 @@ Page {
 			spacing: margin
 
 			WrappingLabel {
-				text: "Game of the Amazons - " + i18n.tr("written by Arc676/Alessandro Vinciguerra. Project available under") + " GPLv3. Copyright 2019 Arc676/Alessandro Vinciguerra <alesvinciguerra@gmail.com>"
+				text: "Game of the Amazons - " + i18n.tr("written by Arc676/Alessandro Vinciguerra. Project available under") + " GPLv3. Copyright 2019-20 Arc676/Alessandro Vinciguerra <alesvinciguerra@gmail.com>"
 			}
 
 			WrappingLabel {
