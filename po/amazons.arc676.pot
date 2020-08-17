@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amazons.arc676\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-17 13:25+0000\n"
+"POT-Creation-Date: 2020-08-17 13:48+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -151,6 +151,22 @@ msgstr ""
 
 #: ../qml/DefaultHeader.qml:57
 msgid "Gameplay Rules"
+msgstr ""
+
+#: ../qml/SetupView.qml:60
+msgid "Player 1 Amazons"
+msgstr ""
+
+#: ../qml/SetupView.qml:77
+msgid "Player 2 Amazons"
+msgstr ""
+
+#: ../qml/SetupView.qml:94
+msgid "Board width"
+msgstr ""
+
+#: ../qml/SetupView.qml:111
+msgid "Board height"
 msgstr ""
 
 #: ../qml/ConfirmDialog.qml:26

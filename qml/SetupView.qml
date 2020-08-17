@@ -57,7 +57,7 @@ Page {
 
 			Label {
 				id: p1lbl
-				text: "Player 1 Amazons"
+				text: i18n.tr("Player 1 Amazons")
 				anchors.verticalCenter: p1amazons.verticalCenter
 			}
 
@@ -74,7 +74,7 @@ Page {
 
 			Label {
 				id: p2lbl
-				text: "Player 2 Amazons"
+				text: i18n.tr("Player 2 Amazons")
 				anchors.verticalCenter: p2amazons.verticalCenter
 			}
 
@@ -91,7 +91,7 @@ Page {
 
 			Label {
 				id: bwlbl
-				text: "Board width"
+				text: i18n.tr("Board width")
 				anchors.verticalCenter: boardWidth.verticalCenter
 			}
 
@@ -108,7 +108,7 @@ Page {
 
 			Label {
 				id: bhlbl
-				text: "Board height"
+				text: i18n.tr("Board height")
 				anchors.verticalCenter: boardHeight.verticalCenter
 			}
 

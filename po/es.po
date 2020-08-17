@@ -212,3 +212,19 @@ msgstr "Reglas del juego"
 #: amazons.desktop.in.h:1
 msgid "Game of the Amazons"
 msgstr "Juego de las amazonas"
+
+#: ../qml/SetupView.qml:60
+msgid "Player 1 Amazons"
+msgstr "Amazonas Jugador 1"
+
+#: ../qml/SetupView.qml:77
+msgid "Player 2 Amazons"
+msgstr "Amazonas Jugador 2"
+
+#: ../qml/SetupView.qml:94
+msgid "Board width"
+msgstr "Ancho del Tablero"
+
+#: ../qml/SetupView.qml:111
+msgid "Board height"
+msgstr "Altura del Tablero"

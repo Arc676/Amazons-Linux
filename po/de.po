@@ -55,7 +55,7 @@ msgid ""
 "square, and a square to which to shoot. Tapping an invalid square at any "
 "point will not affect the app state."
 msgstr "Das Spiel der Amazonen kann mit einer beliebigen Anzahl Amazonen und "
-"auf einem Feld beliebiger Größe gespielt werden. Sie können die Spielparameter "
+"auf einem Feld beliebiger Größe und Form gespielt werden. Sie können die Spielparameter "
 "in den Spieleinstellungen konfigurieren. Die Standardkonfiguration besteht aus "
 "4 Amazonen pro Spieler auf einem Feld der Größe 10x10. Falls das Feld nicht komplett "
 "sichtbar ist, können Sie durch Ziehen scrollen. Der durch die Bogen dargestellte Spieler "
@@ -205,3 +205,19 @@ msgstr "Nein, weiter spielen"
 #: amazons.desktop.in.h:1
 msgid "Game of the Amazons"
 msgstr "Das Spiel der Amazonen"
+
+#: ../qml/SetupView.qml:60
+msgid "Player 1 Amazons"
+msgstr "Amazonen Spieler 1"
+
+#: ../qml/SetupView.qml:77
+msgid "Player 2 Amazons"
+msgstr "Amazonen Spieler 2"
+
+#: ../qml/SetupView.qml:94
+msgid "Board width"
+msgstr "Spielfeldbreite"
+
+#: ../qml/SetupView.qml:111
+msgid "Board height"
+msgstr "Spielfeldhöhe"
