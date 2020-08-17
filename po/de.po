@@ -1,5 +1,5 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# German translation for Amazons
+# Copyright (C) 2020 Arc676/Alessandro Vinciguerra
 # This file is distributed under the same license as the amazons.arc676 package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
@@ -8,18 +8,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amazons.arc676\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-17 13:25+0000\n"
+"POT-Creation-Date: 2020-08-17 12:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../qml/RulesView.qml:40
 msgid "Gameplay rules"
-msgstr ""
+msgstr "Spielregeln"
 
 #: ../qml/RulesView.qml:44
 msgid ""
@@ -32,7 +32,16 @@ msgid ""
 "square if it is occupied by an arrow or another Amazon. The first player "
 "unable to make a legal move loses. Equivalently, the last player able to "
 "make a legal move wins the game."
-msgstr ""
+msgstr "Walter Zamkauskas aus Argentinien hat 1988 das Spiel Amazonen erfunden. Es "
+"ist wie Go und Schach. Zwei Spieler kontrollieren je eine bestimmte Anzahl Amazonen. Diese "
+"können sich wie Damen beim Schach bewegen: in irgendeiner Richtung und über beliebig "
+"viele leere Felder. Danach schießen sie einen Pfeil, welcher das Feld permanent "
+"besetzt, auf welchem er landet. Der Pfeil kann auf irgendein Feld geschossen werden, "
+"welche durch die Bewegungsregeln einer Dame beim Schach von dem neuen Standort der "
+"Amazone erreicht werden könnte. Amazonen und Pfeile können keine Felder "
+"überqueren, welche schon von einer Amazone oder einem Pfeil besetzt sind. Der "
+"erste Spieler ohne einen gültigen Zug verliert. Äquivalenterweise gewinnt "
+"der letzte Spieler, der fähig ist, eine Amazone noch zu bewegen."
 
 #: ../qml/RulesView.qml:48
 msgid ""
@@ -45,7 +54,15 @@ msgid ""
 "indicated. To make a move, tap an Amazon you control, a valid destination "
 "square, and a square to which to shoot. Tapping an invalid square at any "
 "point will not affect the app state."
-msgstr ""
+msgstr "Das Spiel der Amazonen kann mit einer beliebigen Anzahl Amazonen und "
+"auf einem Feld beliebiger Größe gespielt werden. Sie können die Spielparameter "
+"in den Spieleinstellungen konfigurieren. Die Standardkonfiguration besteht aus "
+"4 Amazonen pro Spieler auf einem Feld der Größe 10x10. Falls das Feld nicht komplett "
+"sichtbar ist, können Sie durch Ziehen scrollen. Der durch die Bogen dargestellte Spieler "
+"spielt immer zuerst. Unten auf dem Bildschirm wird angegeben, wer spielt. "
+"Für Ihren Zug: drücken Sie zuerst auf eine Amazone, die Sie kontrollieren, "
+"ein gültiges Zielfeld und zuletzt ein Feld, auf welches der Pfeil landen "
+"soll. Auf ein ungültiges Feld zu drücken, beeinflusst den Spielzustand nicht."
 
 #: ../qml/RulesView.qml:52
 msgid ""
@@ -56,7 +73,14 @@ msgid ""
 "During a game, tap the undo button to clear your square selections and start "
 "over. It is not currently possible to undo a completed move. While setting "
 "up a custom game, tap the undo button to undo the last selection."
-msgstr ""
+msgstr "Drücken Sie auf den in Uhrzeigersinn zeigenden Resetknopf, um ein neues "
+"Spiel mit der Standardkonfiguration zu starten. Diese ist auch die verwendete "
+"Konfiguration am Start der App. Drücken Sie auf den in Gegenuhrzeigersinn zeigenden "
+"Resetknopf, um ein neues Spiel mit eigener Konfiguration zu starten. Diese Parameter "
+"sind in den Einstellungen zu konfigurieren. Während des Spiels können Sie den "
+"Undo-Knopf drücken, um die Wahl an Felder zu löschen und den Zug neu zu starten. "
+"Es ist aktuell nicht möglich, einen beendeten Zug rückgängig zu machen. Beim "
+"Aufstellen eines neuen Spiels, löscht der Undo-Knopf das zuletzt gewählte Feld."
 
 #: ../qml/RulesView.qml:56
 msgid ""
@@ -64,35 +88,38 @@ msgid ""
 "Game_of_the_Amazons'>Wikipedia page</a> or <a href='https://www.youtube.com/"
 "watch?v=kjSOSeRZVNg'>the Numberphile YouTube video</a>."
 msgstr ""
+"Für weitere Details wenden Sie sich bitte an die <a href='https://de.wikipedia.org/wiki/"
+"Amazonen_(Spiel)'>Wikipedia Seite</a> oder <a href='https://www.youtube.com/"
+"watch?v=kjSOSeRZVNg'>das YouTube Video von Numberphile</a>."
 
 #: ../qml/GameView.qml:44 ../qml/GameView.qml:107 ../qml/GameView.qml:222
 msgid "Tap initial starting positions for first player"
-msgstr ""
+msgstr "Drücken Sie auf die Startfelder des ersten Spielers"
 
 #: ../qml/GameView.qml:74 ../qml/GameView.qml:219 ../qml/GameView.qml:252
 #: ../qml/GameView.qml:277
 msgid "Bows to move"
-msgstr ""
+msgstr "Bogen am Zug"
 
 #: ../qml/GameView.qml:224
 msgid "Tap initial starting positions for second player"
-msgstr ""
+msgstr "Drücken Sie auf die Startfelder des zweiten Spielers"
 
 #: ../qml/GameView.qml:247
 msgid "Bows win!"
-msgstr ""
+msgstr "Die Bogen gewinnen!"
 
 #: ../qml/GameView.qml:249
 msgid "Spears win!"
-msgstr ""
+msgstr "Die Lanzen gewinnen!"
 
 #: ../qml/GameView.qml:254
 msgid "Spears to move"
-msgstr ""
+msgstr "Lanzen am Zug"
 
 #: ../qml/AboutView.qml:40
 msgid "written by Arc676/Alessandro Vinciguerra. Project available under"
-msgstr ""
+msgstr "Programmierung von Arc676/Alessandro Vinciguerra. Projekt verfügbar unter"
 
 #: ../qml/AboutView.qml:44
 msgid ""
@@ -100,6 +127,9 @@ msgid ""
 "under the terms of the GNU General Public License as published by the Free "
 "Software Foundation (version 3)."
 msgstr ""
+"Dieses Programm ist freie Software: du kannst es verteilen und/oder "
+"modifizieren nach den Regeln der GNU Public License wie von der Free "
+"Software Foundation (Version 3) veröffentlicht."
 
 #: ../qml/AboutView.qml:48
 msgid ""
@@ -108,6 +138,10 @@ msgid ""
 "FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for "
 "more details."
 msgstr ""
+"Dieses Programm entstand in der Hoffnung, dass es nützlich ist, aber OHNE "
+"JEDE GARANTIE; nicht einmal implizierte Garantien für GEBRAUCHSFÄHIGKEIT "
+"oder EINE SPEZIELLE ANWENDBARKEIT. Für mehr Details lies bitte die GNU "
+"General Public License."
 
 #: ../qml/AboutView.qml:52
 msgid ""
@@ -115,56 +149,59 @@ msgid ""
 "Amazons-Linux'>repository</a> or the <a href='http://www.gnu.org/"
 "licenses/'>GNU licenses page</a>"
 msgstr ""
+"Für den gesamten Lizenztext, besuche das <a href='https://github.com/Arc676/"
+"Amazons-Linux'>Repository</a> oder die <a href='http://www.gnu.org/licenses/'>"
+"\"GNU licenses\" Seite</a>"
 
 #: ../qml/AboutView.qml:56
 msgid "%1 assets"
-msgstr ""
+msgstr "%1 Ressourcen"
 
 #: ../qml/AboutView.qml:61
 msgid ""
 "All assets by Arc676/Alessandro Vinciguerra adapted from CC0 assets by %1"
-msgstr ""
+msgstr "Alle Ressourcen von Arc676/Alessandro Vinciguerra basierend auf CC0 Ressourcen von %1"
 
 #: ../qml/DefaultHeader.qml:20
 msgid "Amazons"
-msgstr ""
+msgstr "Amazonen"
 
 #: ../qml/DefaultHeader.qml:27
 msgid "Undo Choice"
-msgstr ""
+msgstr "Wahl rückgängig machen"
 
 #: ../qml/DefaultHeader.qml:33
 msgid "New Standard Game"
-msgstr ""
+msgstr "Neues Standardspiel"
 
 #: ../qml/DefaultHeader.qml:39
 msgid "Game Settings"
-msgstr ""
+msgstr "Spieleinstellungen"
 
 #: ../qml/DefaultHeader.qml:45
 msgid "New Custom Game"
-msgstr ""
+msgstr "Neues Benutzerdefiniertes Spiel"
 
 #: ../qml/DefaultHeader.qml:51
 msgid "About Amazons"
-msgstr ""
+msgstr "Über Amazonen"
 
 #: ../qml/DefaultHeader.qml:57
 msgid "Gameplay Rules"
-msgstr ""
+msgstr "Spielregeln"
 
 #: ../qml/ConfirmDialog.qml:26
 msgid "Are you sure you want to restart the game?"
-msgstr ""
+msgstr "Sind Sie sicher, dass sie das Spiel zurücksetzen wollen?"
 
 #: ../qml/ConfirmDialog.qml:30
 msgid "Yes, restart"
-msgstr ""
+msgstr "Ja, neu starten"
 
 #: ../qml/ConfirmDialog.qml:39
 msgid "No, keep playing"
-msgstr ""
+msgstr "Nein, weiter spielen"
 
 #: amazons.desktop.in.h:1
 msgid "Game of the Amazons"
-msgstr ""
+msgstr "Das Spiel der Amazonen"
