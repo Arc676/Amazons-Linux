@@ -34,6 +34,7 @@ class Amazons: public QObject {
 	Square src, dst, shot;
 
 	void clearBoard();
+
 public:
 	Amazons();
 	~Amazons();
@@ -47,7 +48,7 @@ public:
 	Q_ENUMS(ClickState)
 
 	enum QSquareState : int {
-		QWHITE, QBLACK, QARROW, QEMPTY
+		QWHITE, QBLACK, QARROW, QEMPTY, QSHARED
 	};
 	Q_ENUMS(QSquareState)
 
@@ -72,6 +73,12 @@ public:
 	Q_INVOKABLE int getSquare(ClickState square, int axis);
 
 	Q_INVOKABLE QSquareState getSquareState(int x, int y);
+
+	Q_INVOKABLE QSquareState getMapState(int x, int y);
+
+private:
+	QSquareState querySquare(int x, int y, bool map);
+
 signals:
 	void redraw();
 	void boardSizeChanged();

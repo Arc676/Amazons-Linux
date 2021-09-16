@@ -139,6 +139,7 @@ Page {
 
 			onPaint: {
 				var ctx = gameCanvas.getContext('2d')
+				// Draw grid of squares
 				ctx.fillStyle = "#FFFFFF"
 				ctx.fillRect(0, 0, gameCanvas.width, gameCanvas.height)
 				ctx.fillStyle = "#7F7F7F"
@@ -150,6 +151,7 @@ Page {
 					}
 				}
 				if (gameViewPage.isSettingUp) {
+					// If setting up, show stored player positions
 					for (var i = 0; i < gameViewPage.pickedPositions * 2; i += 2) {
 						var x = gameViewPage.initialPositions[i]
 						var y = gameViewPage.initialPositions[i + 1]
@@ -161,6 +163,7 @@ Page {
 						ctx.fillRect(x * squareSize, y * squareSize, squareSize, squareSize)
 					}
 				} else {
+					// If playing, draw player positions and arrows
 					for (var x = 0; x < Amazons.getBoardWidth(); x++) {
 						for (var y = 0; y < Amazons.getBoardHeight(); y++) {
 							switch (Amazons.getSquareState(x, y)) {
@@ -178,6 +181,7 @@ Page {
 							}
 						}
 					}
+					// If in the middle of a move, highlight chosen squares
 					switch (gameViewPage.clickedSquare) {
 						case 2:
 							ctx.fillStyle = "#FF0000"
@@ -191,6 +195,24 @@ Page {
 							ctx.fillRect(xs * squareSize, ys * squareSize, squareSize, squareSize)
 						default:
 							break
+					}
+					// If the game is over, highlight the regions controlled by each player
+					if (gameViewPage.isGameOver) {
+						for (var x = 0; x < Amazons.getBoardWidth(); x++) {
+							for (var y = 0; y < Amazons.getBoardHeight(); y++) {
+								switch (Amazons.getMapState(x, y)) {
+									case Amazons.QWHITE:
+										ctx.fillStyle = Qt.rgba(255, 0, 0, 0.5)
+										break
+									case Amazons.QBLACK:
+										ctx.fillStyle = Qt.rgba(0, 0, 255, 0.5)
+										break
+									default:
+										continue
+								}
+								ctx.fillRect(x * squareSize, y * squareSize, squareSize, squareSize)
+							}
+						}
 					}
 				}
 			}
@@ -254,11 +276,13 @@ Page {
 									stateLabel.text = i18n.tr("Bows win! %1 squares to %2.")
 														.arg(Amazons.whiteSquares)
 														.arg(Amazons.blackSquares)
+									gameCanvas.requestPaint()
 								} else if (winner === Amazons.QBLACK) {
 									gameViewPage.isGameOver = true;
 									stateLabel.text = i18n.tr("Spears win! %1 squares to %2.")
 														.arg(Amazons.blackSquares)
 														.arg(Amazons.whiteSquares)
+									gameCanvas.requestPaint()
 								} else {
 									if (Amazons.whiteToPlay()) {
 										stateLabel.text = i18n.tr("Bows to move")

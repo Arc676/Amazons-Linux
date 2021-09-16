@@ -132,17 +132,29 @@ int Amazons::getSquare(ClickState square, int axis) {
 }
 
 Amazons::QSquareState Amazons::getSquareState(int x, int y) {
+	return querySquare(x, y, false);
+}
+
+Amazons::QSquareState Amazons::getMapState(int x, int y) {
+	return querySquare(x, y, true);
+}
+
+Amazons::QSquareState Amazons::querySquare(int x, int y, bool map) {
 	if (!board.board) {
 		return QEMPTY;
 	}
 	Square sq = { x, y };
-	switch (boardstate_squareState(&board, &sq)) {
+	SquareState state = map ? boardstate_squareController(&board, &sq) :
+								boardstate_squareState(&board, &sq);
+	switch (state) {
 		case BLACK:
 			return QBLACK;
 		case WHITE:
 			return QWHITE;
 		case ARROW:
 			return QARROW;
+		case SHARED:
+			return QSHARED;
 		default:
 			return QEMPTY;
 	}
