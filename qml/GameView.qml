@@ -27,6 +27,7 @@ Page {
 	property SetupView setup
 
 	property bool isSettingUp: false
+	property bool isGameOver: false
 
 	property int pickedPositions: 0
 	property var initialPositions: []
@@ -70,6 +71,7 @@ Page {
 		gameViewPage.p2count = 4
 		Amazons.startGame(wstart, bstart)
 		gameViewPage.isSettingUp = false
+		gameViewPage.isGameOver = false
 		gameViewPage.clickedSquare = 0
 		stateLabel.text = i18n.tr("Bows to move")
 	}
@@ -205,7 +207,7 @@ Page {
 						for (var i = 0; i < gameViewPage.pickedPositions * 2; i += 2) {
 							if (gameViewPage.initialPositions[i] == x &&
 								gameViewPage.initialPositions[i + 1] == y) {
-								return;
+								return
 							}
 						}
 						gameViewPage.initialPositions.push(x)
@@ -216,6 +218,7 @@ Page {
 							var bstart = gameViewPage.initialPositions.slice(gameViewPage.p1count * 2)
 							Amazons.startGame(wstart, bstart)
 							gameViewPage.isSettingUp = false
+							gameViewPage.isGameOver = false
 							stateLabel.text = i18n.tr("Bows to move")
 						} else {
 							if (gameViewPage.pickedPositions < gameViewPage.p1count) {
@@ -226,6 +229,9 @@ Page {
 							gameCanvas.requestPaint()
 						}
 					} else {
+						if (gameViewPage.isGameOver) {
+							return
+						}
 						switch (gameViewPage.clickedSquare) {
 							case 0:
 								if (!Amazons.setSrc(x, y)) {
