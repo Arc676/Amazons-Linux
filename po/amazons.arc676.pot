@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amazons.arc676\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-17 13:48+0000\n"
+"POT-Creation-Date: 2021-09-16 14:29+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -65,28 +65,28 @@ msgid ""
 "watch?v=kjSOSeRZVNg'>the Numberphile YouTube video</a>."
 msgstr ""
 
-#: ../qml/GameView.qml:44 ../qml/GameView.qml:107 ../qml/GameView.qml:222
+#: ../qml/GameView.qml:45 ../qml/GameView.qml:109 ../qml/GameView.qml:247
 msgid "Tap initial starting positions for first player"
 msgstr ""
 
-#: ../qml/GameView.qml:74 ../qml/GameView.qml:219 ../qml/GameView.qml:252
-#: ../qml/GameView.qml:277
+#: ../qml/GameView.qml:76 ../qml/GameView.qml:244 ../qml/GameView.qml:288
+#: ../qml/GameView.qml:313
 msgid "Bows to move"
 msgstr ""
 
-#: ../qml/GameView.qml:224
+#: ../qml/GameView.qml:249
 msgid "Tap initial starting positions for second player"
 msgstr ""
 
-#: ../qml/GameView.qml:247
-msgid "Bows win!"
+#: ../qml/GameView.qml:276
+msgid "Bows win! %1 squares to %2."
 msgstr ""
 
-#: ../qml/GameView.qml:249
-msgid "Spears win!"
+#: ../qml/GameView.qml:282
+msgid "Spears win! %1 squares to %2."
 msgstr ""
 
-#: ../qml/GameView.qml:254
+#: ../qml/GameView.qml:290
 msgid "Spears to move"
 msgstr ""
 
