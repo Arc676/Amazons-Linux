@@ -1,4 +1,4 @@
-// Copyright (C) 2019-20 Arc676/Alessandro Vinciguerra
+// Copyright (C) 2019-21 Arc676/Alessandro Vinciguerra
 
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -70,11 +70,19 @@ bool Amazons::moveAmazon(int x, int y) {
 	return false;
 }
 
-int Amazons::gameIsOver() {
-	if (playerHasValidMove(&board, currentPlayer)) {
-		return 0;
+Amazons::QSquareState Amazons::gameIsOver() {
+	if (!updateRegionMap(&board)) {
+		countControlledSquares(&board, &whiteSquares, &blackSquares);
+		if (whiteSquares > blackSquares) {
+			return QWHITE;
+		} else {
+			return QBLACK;
+		}
 	}
-	return currentPlayer == BLACK ? 1 : 2;
+	if (playerHasValidMove(&board, currentPlayer)) {
+		return QEMPTY;
+	}
+	return currentPlayer == BLACK ? QWHITE : QBLACK;
 }
 
 bool Amazons::whiteToPlay() {

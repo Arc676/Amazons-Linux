@@ -1,4 +1,4 @@
-// Copyright (C) 2019-20 Arc676/Alessandro Vinciguerra <alesvinciguerra@gmail.com>
+// Copyright (C) 2019-21 Arc676/Alessandro Vinciguerra <alesvinciguerra@gmail.com>
 
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -243,9 +243,9 @@ Page {
 									return
 								}
 								var winner = Amazons.gameIsOver()
-								if (winner === 1) {
+								if (winner === Amazons.QWHITE) {
 									stateLabel.text = i18n.tr("Bows win!")
-								} else if (winner === 2) {
+								} else if (winner === Amazons.QBLACK) {
 									stateLabel.text = i18n.tr("Spears win!")
 								} else {
 									if (Amazons.whiteToPlay()) {

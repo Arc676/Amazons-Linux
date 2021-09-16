@@ -1,4 +1,4 @@
-// Copyright (C) 2019-20 Arc676/Alessandro Vinciguerra
+// Copyright (C) 2019-21 Arc676/Alessandro Vinciguerra
 
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -28,6 +28,8 @@ class Amazons: public QObject {
 	BoardState board;
 	SquareState currentPlayer = WHITE;
 
+	int whiteSquares, blackSquares;
+
 	int wp, bp, bw, bh;
 	Square src, dst, shot;
 
@@ -35,6 +37,9 @@ class Amazons: public QObject {
 public:
 	Amazons();
 	~Amazons();
+
+	Q_PROPERTY(int whiteSquares MEMBER whiteSquares)
+	Q_PROPERTY(int blackSquares MEMBER blackSquares)
 
 	enum ClickState : int {
 		SOURCE = 0, DESTINATION, SHOT
@@ -50,7 +55,7 @@ public:
 
 	Q_INVOKABLE bool moveAmazon(int x, int y);
 
-	Q_INVOKABLE int gameIsOver();
+	Q_INVOKABLE QSquareState gameIsOver();
 
 	Q_INVOKABLE bool whiteToPlay();
 
