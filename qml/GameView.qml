@@ -250,9 +250,15 @@ Page {
 								}
 								var winner = Amazons.gameIsOver()
 								if (winner === Amazons.QWHITE) {
-									stateLabel.text = i18n.tr("Bows win!")
+									gameViewPage.isGameOver = true;
+									stateLabel.text = i18n.tr("Bows win! %1 squares to %2.")
+														.arg(Amazons.whiteSquares)
+														.arg(Amazons.blackSquares)
 								} else if (winner === Amazons.QBLACK) {
-									stateLabel.text = i18n.tr("Spears win!")
+									gameViewPage.isGameOver = true;
+									stateLabel.text = i18n.tr("Spears win! %1 squares to %2.")
+														.arg(Amazons.blackSquares)
+														.arg(Amazons.whiteSquares)
 								} else {
 									if (Amazons.whiteToPlay()) {
 										stateLabel.text = i18n.tr("Bows to move")
