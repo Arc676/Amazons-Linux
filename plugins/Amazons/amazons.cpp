@@ -52,15 +52,14 @@ void Amazons::startGame(QVariant whitepos, QVariant blackpos) {
 		i++;
 	}
 	boardstate_init(&board, wp, bp, bw, bh, wpos, bpos);
-	currentPlayer = WHITE;
 	emit redraw();
 }
 
 bool Amazons::moveAmazon(int x, int y) {
 	Square shot = Square { x, y };
-	if (boardstate_squareState(&board, &src) == currentPlayer && amazons_move(&board, &src, &dst)) {
+	if (boardstate_squareState(&board, &src) == board.currentPlayer && amazons_move(&board, &src, &dst)) {
 		if (amazons_shoot(&board, &dst, &shot)) {
-			swapPlayer(&currentPlayer);
+			swapPlayer(&(board.currentPlayer));
 			emit redraw();
 			return true;
 		} else {
@@ -71,22 +70,21 @@ bool Amazons::moveAmazon(int x, int y) {
 }
 
 Amazons::QSquareState Amazons::gameIsOver() {
-	if (!updateRegionMap(&board)) {
-		countControlledSquares(&board, &whiteSquares, &blackSquares);
-		if (whiteSquares > blackSquares) {
-			return QWHITE;
-		} else {
-			return QBLACK;
-		}
+	SquareState winner = boardstate_winner(&board, &whiteSquares, &blackSquares);
+	if (winner != EMPTY) {
+		// Library requires that the winner be checked before swapping to the
+		// other player, but since the player is swapped in moveAmazons,
+		// we can just return the opposite player
+		return winner == BLACK ? QWHITE : QBLACK;
 	}
-	if (playerHasValidMove(&board, currentPlayer)) {
+	if (playerHasValidMove(&board, board.currentPlayer)) {
 		return QEMPTY;
 	}
-	return currentPlayer == BLACK ? QWHITE : QBLACK;
+	return board.currentPlayer == BLACK ? QWHITE : QBLACK;
 }
 
 bool Amazons::whiteToPlay() {
-	return currentPlayer == WHITE;
+	return board.currentPlayer == WHITE;
 }
 
 void Amazons::setGameProperties(int wp, int bp, int bw, int bh) {
@@ -99,7 +97,7 @@ void Amazons::setGameProperties(int wp, int bp, int bw, int bh) {
 
 bool Amazons::setSrc(int x, int y) {
 	src = Square { x, y };
-	if (boardstate_squareState(&board, &src) == currentPlayer) {
+	if (boardstate_squareState(&board, &src) == board.currentPlayer) {
 		emit redraw();
 		return true;
 	}

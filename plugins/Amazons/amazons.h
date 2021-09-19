@@ -26,7 +26,6 @@ class Amazons: public QObject {
 	Q_OBJECT
 
 	BoardState board;
-	SquareState currentPlayer = WHITE;
 
 	int whiteSquares, blackSquares;
 
