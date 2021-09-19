@@ -51,6 +51,7 @@ void Amazons::startGame(QVariant whitepos, QVariant blackpos) {
 		bpos[i] = Square {x, y};
 		i++;
 	}
+	highlightRegions = false;
 	boardstate_init(&board, wp, bp, bw, bh, wpos, bpos);
 	emit redraw();
 }
@@ -72,6 +73,8 @@ bool Amazons::moveAmazon(int x, int y) {
 Amazons::QSquareState Amazons::gameIsOver() {
 	SquareState winner = boardstate_winner(&board, &whiteSquares, &blackSquares);
 	if (winner != EMPTY) {
+		// Only highlight the controlled regions if the game ended due to region control
+		highlightRegions = true;
 		// Library requires that the winner be checked before swapping to the
 		// other player, but since the player is swapped in moveAmazons,
 		// we can just return the opposite player

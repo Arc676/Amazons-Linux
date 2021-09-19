@@ -28,6 +28,7 @@ class Amazons: public QObject {
 	BoardState board;
 
 	int whiteSquares, blackSquares;
+	bool highlightRegions;
 
 	int wp, bp, bw, bh;
 	Square src, dst, shot;
@@ -40,6 +41,7 @@ public:
 
 	Q_PROPERTY(int whiteSquares MEMBER whiteSquares)
 	Q_PROPERTY(int blackSquares MEMBER blackSquares)
+	Q_PROPERTY(bool highlightRegions MEMBER highlightRegions)
 
 	enum ClickState : int {
 		SOURCE = 0, DESTINATION, SHOT

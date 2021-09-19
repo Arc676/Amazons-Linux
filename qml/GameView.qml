@@ -197,7 +197,7 @@ Page {
 							break
 					}
 					// If the game is over, highlight the regions controlled by each player
-					if (gameViewPage.isGameOver) {
+					if (gameViewPage.isGameOver && Amazons.highlightRegions) {
 						for (var x = 0; x < Amazons.getBoardWidth(); x++) {
 							for (var y = 0; y < Amazons.getBoardHeight(); y++) {
 								switch (Amazons.getMapState(x, y)) {
@@ -273,16 +273,26 @@ Page {
 								var winner = Amazons.gameIsOver()
 								if (winner === Amazons.QWHITE) {
 									gameViewPage.isGameOver = true;
-									stateLabel.text = i18n.tr("Bows win! Controlled squares: %1 - %2.")
-														.arg(Amazons.whiteSquares)
-														.arg(Amazons.blackSquares)
 									gameCanvas.requestPaint()
+
+									if (Amazons.highlightRegions) {
+										stateLabel.text = i18n.tr("Bows win! Controlled squares: %1 - %2.")
+															.arg(Amazons.whiteSquares)
+															.arg(Amazons.blackSquares)
+									} else {
+										stateLabel.text = i18n.tr("Bows win!")
+									}
 								} else if (winner === Amazons.QBLACK) {
 									gameViewPage.isGameOver = true;
-									stateLabel.text = i18n.tr("Spears win! Controlled squares: %1 - %2.")
-														.arg(Amazons.blackSquares)
-														.arg(Amazons.whiteSquares)
 									gameCanvas.requestPaint()
+
+									if (Amazons.highlightRegions) {
+										stateLabel.text = i18n.tr("Spears win! Controlled squares: %1 - %2.")
+															.arg(Amazons.whiteSquares)
+															.arg(Amazons.blackSquares)
+									} else {
+										stateLabel.text = i18n.tr("Spears win!")
+									}
 								} else {
 									if (Amazons.whiteToPlay()) {
 										stateLabel.text = i18n.tr("Bows to move")
