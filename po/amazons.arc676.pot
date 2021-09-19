@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amazons.arc676\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-19 13:17+0000\n"
+"POT-Creation-Date: 2021-09-19 15:08+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -69,8 +69,8 @@ msgstr ""
 msgid "Tap initial starting positions for first player"
 msgstr ""
 
-#: ../qml/GameView.qml:76 ../qml/GameView.qml:244 ../qml/GameView.qml:288
-#: ../qml/GameView.qml:313
+#: ../qml/GameView.qml:76 ../qml/GameView.qml:244 ../qml/GameView.qml:298
+#: ../qml/GameView.qml:323
 msgid "Bows to move"
 msgstr ""
 
@@ -78,15 +78,23 @@ msgstr ""
 msgid "Tap initial starting positions for second player"
 msgstr ""
 
-#: ../qml/GameView.qml:276
+#: ../qml/GameView.qml:279
 msgid "Bows win! Controlled squares: %1 - %2."
 msgstr ""
 
-#: ../qml/GameView.qml:282
-msgid "Spears win! Controlled squares: %1 - %2."
+#: ../qml/GameView.qml:283
+msgid "Bows win!"
 msgstr ""
 
 #: ../qml/GameView.qml:290
+msgid "Spears win! Controlled squares: %1 - %2."
+msgstr ""
+
+#: ../qml/GameView.qml:294
+msgid "Spears win!"
+msgstr ""
+
+#: ../qml/GameView.qml:300
 msgid "Spears to move"
 msgstr ""
 

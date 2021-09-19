@@ -113,6 +113,14 @@ msgstr "Die Bogen gewinnen! Kontrollierte Felder: %1 - %2."
 msgid "Spears win! Controlled squares: %1 - %2."
 msgstr "Die Lanzen gewinnen! Kontrollierte Felder: %1 - %2."
 
+#: ../qml/GameView.qml:247
+msgid "Bows win!"
+msgstr "Die Bogen gewinnen!"
+
+#: ../qml/GameView.qml:249
+msgid "Spears win!"
+msgstr "Die Lanzen gewinnen!"
+
 #: ../qml/GameView.qml:254
 msgid "Spears to move"
 msgstr "Lanzen am Zug"
