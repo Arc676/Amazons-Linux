@@ -75,10 +75,16 @@ Amazons::QSquareState Amazons::gameIsOver() {
 	if (winner != EMPTY) {
 		// Only highlight the controlled regions if the game ended due to region control
 		highlightRegions = true;
-		// Library requires that the winner be checked before swapping to the
-		// other player, but since the player is swapped in moveAmazons,
-		// we can just return the opposite player
-		return winner == BLACK ? QWHITE : QBLACK;
+		// If each player controls the same number of squares,
+		// then the current player wins
+		if (whiteSquares == blackSquares) {
+			// The library requires that the winner be checked before changing the
+			// "current" player, but since the player is swapped in moveAmazons,
+			// we can just return the opposite player
+			return winner == BLACK ? QWHITE : QBLACK;
+		}
+		// However, if one player controls more squares, then the winner is whoever controls more squares
+		return winner == BLACK ? QBLACK : QWHITE;
 	}
 	if (playerHasValidMove(&board, board.currentPlayer)) {
 		return QEMPTY;

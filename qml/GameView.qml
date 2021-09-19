@@ -288,8 +288,8 @@ Page {
 
 									if (Amazons.highlightRegions) {
 										stateLabel.text = i18n.tr("Spears win! Controlled squares: %1 - %2.")
-															.arg(Amazons.whiteSquares)
 															.arg(Amazons.blackSquares)
+															.arg(Amazons.whiteSquares)
 									} else {
 										stateLabel.text = i18n.tr("Spears win!")
 									}
