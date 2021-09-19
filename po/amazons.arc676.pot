@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amazons.arc676\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-19 13:05+0000\n"
+"POT-Creation-Date: 2021-09-19 13:17+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -79,11 +79,11 @@ msgid "Tap initial starting positions for second player"
 msgstr ""
 
 #: ../qml/GameView.qml:276
-msgid "Bows win! %1 squares to %2."
+msgid "Bows win! Controlled squares: %1 - %2."
 msgstr ""
 
 #: ../qml/GameView.qml:282
-msgid "Spears win! %1 squares to %2."
+msgid "Spears win! Controlled squares: %1 - %2."
 msgstr ""
 
 #: ../qml/GameView.qml:290

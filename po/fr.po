@@ -164,11 +164,11 @@ msgstr "Appuyez sur les positions initiales de démarrage pour le deuxième joue
 
 #: ../qml/GameView.qml:247
 msgid "Bows win!"
-msgstr "Les archers ont gagné !"
+msgstr "Les archers ont gagné ! Cases controllées: %1 - %2."
 
 #: ../qml/GameView.qml:249
 msgid "Spears win!"
-msgstr "Les lanciers ont gagné !"
+msgstr "Les lanciers ont gagné ! Cases controllées: %1 - %2."
 
 #: ../qml/GameView.qml:254
 msgid "Spears to move"

@@ -170,12 +170,12 @@ msgid "Tap initial starting positions for second player"
 msgstr "Pulsar las posiciones iniciales de partida para el segundo jugador"
 
 #: ../qml/GameView.qml:246
-msgid "Bows win!"
-msgstr "¡Ganan los arcos!"
+msgid "Bows win! Controlled squares: %1 - %2."
+msgstr "¡Ganan los arcos! Casillas controladas: %1 - %2."
 
 #: ../qml/GameView.qml:248
-msgid "Spears win!"
-msgstr "¡Ganan las lanzas!"
+msgid "Spears win! Controlled squares: %1 - %2."
+msgstr "¡Ganan las lanzas! Casillas controladas: %1 - %2."
 
 #: ../qml/GameView.qml:253
 msgid "Spears to move"

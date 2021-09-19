@@ -273,13 +273,13 @@ Page {
 								var winner = Amazons.gameIsOver()
 								if (winner === Amazons.QWHITE) {
 									gameViewPage.isGameOver = true;
-									stateLabel.text = i18n.tr("Bows win! %1 squares to %2.")
+									stateLabel.text = i18n.tr("Bows win! Controlled squares: %1 - %2.")
 														.arg(Amazons.whiteSquares)
 														.arg(Amazons.blackSquares)
 									gameCanvas.requestPaint()
 								} else if (winner === Amazons.QBLACK) {
 									gameViewPage.isGameOver = true;
-									stateLabel.text = i18n.tr("Spears win! %1 squares to %2.")
+									stateLabel.text = i18n.tr("Spears win! Controlled squares: %1 - %2.")
 														.arg(Amazons.blackSquares)
 														.arg(Amazons.whiteSquares)
 									gameCanvas.requestPaint()
