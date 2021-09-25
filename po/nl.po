@@ -1,0 +1,238 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the amazons.arc676 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: amazons.arc676\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-19 15:50+0000\n"
+"PO-Revision-Date: 2021-09-24 11:48+0200\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.0\n"
+"Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: nl\n"
+
+#: ../qml/RulesView.qml:40
+msgid "Gameplay rules"
+msgstr "Spelregels"
+
+#: ../qml/RulesView.qml:44
+msgid ""
+"Amazons is a game invented in 1988 by Walter Zamkauskas of Argentina. It's "
+"similar to go and chess. Two players each control a number of Amazons. These "
+"can move any number of squares in any direction like chess queens. After "
+"moving, they shoot an arrow which permanently occupies the tile on which it "
+"lands. The arrow can land on any square accessible by a chess-queen-like "
+"move from the Amazon's new location. Amazons and arrows cannot move across a "
+"square if it is occupied by an arrow or another Amazon. The first player "
+"unable to make a legal move loses. Equivalently, the last player able to "
+"make a legal move wins the game."
+msgstr ""
+"Amazones is in 1988 gemaakt door Walter Zamkauskas uit Argentinië. Het spel "
+"is vergelijkbaar met go en schaken. Twee spelers hebben de controle over een "
+"aantal amazones. Zij kunnen een onbeperkt aantal vakjes worden verplaatst en "
+"in elke richting, net als de koningin bij schaken. Na het verplaatsen "
+"schieten ze een pijl af die op een gekozen vakje landt om aan te geven dat "
+"dat vakje van hen is. De pijl kan landen op elk vakje dat kan worden bereikt "
+"vanaf de nieuwe locatie. Amazones kunnen niet worden verplaatst naar een "
+"vakje met daarop een pijl of andere amazone. De eerste speler die geen "
+"geldige zet meer kan doen verliest het spel, waardoor de speler die de "
+"laatste geldige zet kon doen wint."
+
+#: ../qml/RulesView.qml:48
+msgid ""
+"The Game of the Amazons can be played with any number of Amazons and on any "
+"board size or shape. You can configure the game parameters in the game "
+"settings. The standard configuration involves 4 Amazons for each player on a "
+"10x10 grid. If the entirety of the board does not fit on screen, you can "
+"drag to view different areas of the board. The player represented by the "
+"bows always plays first. At the bottom of the screen, the current player is "
+"indicated. To make a move, tap an Amazon you control, a valid destination "
+"square, and a square to which to shoot. Tapping an invalid square at any "
+"point will not affect the app state."
+msgstr ""
+"Amazones kan worden gespeeld met een onbeperkt aantal amazones en op elk "
+"soort bord. In de instellingen kun je dit allemaal instellen. Het "
+"standaardbord wordt gespeeld met 4 amazones per speler op een rooster met 10 "
+"horizontale en verticale vakjes. Als het bord niet volledig op het scherm "
+"past, dan kun je vegen om de rest van het bord te bekijken. De speler met de "
+"boog begint. Onderaan het scherm wordt de huidige speler getoond. Je kunt "
+"een zet doen door op een van je amazones te drukken, gevolgd door een geldig "
+"bestemmingsvakje en een vakje waarnaar je een pijl wilt schieten. Je "
+"verliest je beurt niet als je op een ongeldig vakje drukt."
+
+#: ../qml/RulesView.qml:52
+msgid ""
+"Tap the clockwise-facing reset button to start a new game using the standard "
+"configuration. This is also the configuration used when the app is launched. "
+"Tap the counterclockwise-facing reset button to start a new game with a "
+"custom starting configuration. The parameters are set in the game settings. "
+"During a game, tap the undo button to clear your square selections and start "
+"over. It is not currently possible to undo a completed move. While setting "
+"up a custom game, tap the undo button to undo the last selection."
+msgstr ""
+"Druk op de herstelknop in wijzerzin om een nieuw spel op een standaardbord "
+"te starten. Druk op de herstelknop in tegenwijzerzin om een nieuw spel op "
+"een eigen ingesteld bord te starten. Je kunt je eigen bord instellen in de "
+"spelinstellingen. Druk tijdens het spel op de knop ‘Ongedaan maken’ om de "
+"gekozen vakjes te demarkeren en nieuwe te kiezen. Het is momenteel niet "
+"mogelijk om een reeds gedane zet ongedaan te maken."
+
+#: ../qml/RulesView.qml:56
+msgid ""
+"For more details, please refer to the <a href='https://en.wikipedia.org/wiki/"
+"Game_of_the_Amazons'>Wikipedia page</a> or <a href='https://www.youtube.com/"
+"watch?v=kjSOSeRZVNg'>the Numberphile YouTube video</a>."
+msgstr ""
+"Ga voor meer informatie naar de <a href='https://en.wikipedia.org/wiki/"
+"Game_of_the_Amazons'>Wikipedia-pagina</a> (Engels) of bekijk <a "
+"href='https://www.youtube.com/watch?v=kjSOSeRZVNg'>Numberphile's YouTube-"
+"video</a> (Engels)."
+
+#: ../qml/GameView.qml:45 ../qml/GameView.qml:109 ../qml/GameView.qml:247
+msgid "Tap initial starting positions for first player"
+msgstr "Eerste speler: druk op de startposities"
+
+#: ../qml/GameView.qml:76 ../qml/GameView.qml:244 ../qml/GameView.qml:298
+#: ../qml/GameView.qml:323
+msgid "Bows to move"
+msgstr "Het boogteam is aan zet"
+
+#: ../qml/GameView.qml:249
+msgid "Tap initial starting positions for second player"
+msgstr "Tweede speler: druk op de startposities"
+
+#: ../qml/GameView.qml:279
+msgid "Bows win! Controlled squares: %1 - %2."
+msgstr "Het boogteam heeft gewonnen! Aantal bezette vakjes: %1 - %2."
+
+#: ../qml/GameView.qml:283
+msgid "Bows win!"
+msgstr "Het boogteam heeft gewonnen!"
+
+#: ../qml/GameView.qml:290
+msgid "Spears win! Controlled squares: %1 - %2."
+msgstr "Het speerteam heeft gewonnen! Aantal bezette vakjes: %1 - %2."
+
+#: ../qml/GameView.qml:294
+msgid "Spears win!"
+msgstr "Het speerteam heeft gewonnen!"
+
+#: ../qml/GameView.qml:300
+msgid "Spears to move"
+msgstr "Het speerteam is aan zet"
+
+#: ../qml/AboutView.qml:40
+msgid "written by Arc676/Alessandro Vinciguerra. Project available under"
+msgstr ""
+"gemaakt door Arc676/Alessandro Vinciguerra. Het project is beschikbaar onder "
+"de licentie"
+
+#: ../qml/AboutView.qml:44
+msgid ""
+"This program is free software: you can redistribute it and/or modify it "
+"under the terms of the GNU General Public License as published by the Free "
+"Software Foundation (version 3)."
+msgstr ""
+"Deze app is vrije software: je mag de app heruitgeven en/of aanpassen onder "
+"de voorwaarden van de GNU General Public License, zoals gepubliceerd door de "
+"Free Software Foundation (versie 3)."
+
+#: ../qml/AboutView.qml:48
+msgid ""
+"This program is distributed in the hope that it will be useful, but WITHOUT "
+"ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
+"FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for "
+"more details."
+msgstr ""
+"Deze app wordt verspreidt in de hoop nuttig te zijn, maar wordt geleverd "
+"ZONDER ENIGE VORM VAN GARANTIE, zelfs zonder de garantie van VERKOOPBAARHEID "
+"of HET DIENEN VAN EEN BEPAALD DOEL. Bekijk voor meer informatie de "
+"voorwaarden van de GNU General Public License."
+
+#: ../qml/AboutView.qml:52
+msgid ""
+"For the full license text, visit the <a href='https://github.com/Arc676/"
+"Amazons-Linux'>repository</a> or the <a href='http://www.gnu.org/"
+"licenses/'>GNU licenses page</a>"
+msgstr ""
+"De volledige licentietekst is te vinden in de <a href='https://github.com/"
+"Arc676/Amazons-Linux'>repo</a> (Engels) of op de <a href='http://www.gnu.org/"
+"licenses/'>GNU-licentiepagina</a>"
+
+#: ../qml/AboutView.qml:56
+msgid "%1 assets"
+msgstr "%1 elementen"
+
+#: ../qml/AboutView.qml:61
+msgid ""
+"All assets by Arc676/Alessandro Vinciguerra adapted from CC0 assets by %1"
+msgstr ""
+"Alle elementen zijn gemaakt door Arc676/Alessandro Vinciguerra op basis van "
+"de CC0-items van %1"
+
+#: ../qml/DefaultHeader.qml:20
+msgid "Amazons"
+msgstr "Amazones"
+
+#: ../qml/DefaultHeader.qml:27
+msgid "Undo Choice"
+msgstr "Ongedaan maken"
+
+#: ../qml/DefaultHeader.qml:33
+msgid "New Standard Game"
+msgstr "Nieuw standaardspel"
+
+#: ../qml/DefaultHeader.qml:39
+msgid "Game Settings"
+msgstr "Spelinstellingen"
+
+#: ../qml/DefaultHeader.qml:45
+msgid "New Custom Game"
+msgstr "Nieuw eigen spel"
+
+#: ../qml/DefaultHeader.qml:51
+msgid "About Amazons"
+msgstr "Over Amazones"
+
+#: ../qml/DefaultHeader.qml:57
+msgid "Gameplay Rules"
+msgstr "Spelregels"
+
+#: ../qml/SetupView.qml:60
+msgid "Player 1 Amazons"
+msgstr "Amazones van speler 1"
+
+#: ../qml/SetupView.qml:77
+msgid "Player 2 Amazons"
+msgstr "Amazones van speler 2"
+
+#: ../qml/SetupView.qml:94
+msgid "Board width"
+msgstr "Bordbreedte"
+
+#: ../qml/SetupView.qml:111
+msgid "Board height"
+msgstr "Bordhoogte"
+
+#: ../qml/ConfirmDialog.qml:26
+msgid "Are you sure you want to restart the game?"
+msgstr "Weet je zeker dat je het spel wilt herstarten?"
+
+#: ../qml/ConfirmDialog.qml:30
+msgid "Yes, restart"
+msgstr "Ja, herstarten"
+
+#: ../qml/ConfirmDialog.qml:39
+msgid "No, keep playing"
+msgstr "Nee, doorspelen"
+
+#: amazons.desktop.in.h:1
+msgid "Game of the Amazons"
+msgstr "Amazones"
